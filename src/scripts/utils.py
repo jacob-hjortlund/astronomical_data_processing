@@ -27,6 +27,7 @@ def show_image(
     fig=None,
     ax=None,
     input_ratio=None,
+    cbar_label=None,
 ):
     """
     Show an image in matplotlib with some basic astronomically-appropriat stretching.
@@ -119,7 +120,9 @@ def show_image(
         # the colorbar the same height as the image, but they do....unless the image
         # is wider than it is tall. Sticking with this for now anyway...
         # Thanks: https://stackoverflow.com/a/26720422/3486425
-        fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+        cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+        if cbar_label is not None:
+            cbar.set_label(cbar_label, fontsize=16)
         # In case someone in the future wants to improve this:
         # https://joseph-long.com/writing/colorbars/
         # https://stackoverflow.com/a/33505522/3486425
@@ -314,6 +317,8 @@ def create_master(
 
     if image_names is None and save:
         image_names = [f"{i}.fits" for i in range(len(images))]
+    elif image_names is str and save:
+        image_names = [f"{image_names}_{i}.fits" for i in range(len(images))]
     else:
         images = list(images)
 
@@ -340,6 +345,8 @@ def create_master(
 
     if save:
         master.write(save_path / master_name, overwrite=True)
+
+    return master
 
 
 # TODO: Add overscan option
