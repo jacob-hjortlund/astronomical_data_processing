@@ -121,8 +121,9 @@ def show_image(
         # is wider than it is tall. Sticking with this for now anyway...
         # Thanks: https://stackoverflow.com/a/26720422/3486425
         cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
-        # if cbar_label is not None:
-        #     cbar.ax.set_ylabel(cbar_label, fontsize=16, rotation=90)
+        if cbar_label is not None:
+            cbar.ax.set_ylabel(cbar_label, fontsize=16, rotation=-90)
+            # cbar.ax.set_ylabel(cbar_label, fontsize=16, rotation=90)
 
         # In case someone in the future wants to improve this:
         # https://joseph-long.com/writing/colorbars/
