@@ -26,14 +26,10 @@ bias_collection = calib_collection.filter(**bias_filter)
 biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 
 fig, ax = plt.subplots(2, 2, figsize=(10, 10))
-
+ax = ax.flatten()
 for i, bias in enumerate(biases):
-    utils.show_image(
-        bias,
-        fig=fig,
-        ax=ax[i // 2, i % 2],
-    )
-    ax[i // 2, i % 2].set_title(f"Bias {i + 1}", fontsize=16)
+    utils.show_image(bias, fig=fig, ax=ax[i])
+    ax[i].set_title(f"Bias {i + 1}", fontsize=16)
 
 fig.suptitle("Randomly Selected Bias Frames", fontsize=20)
 fig.tight_layout()
