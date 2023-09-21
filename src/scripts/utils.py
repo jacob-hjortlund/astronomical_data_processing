@@ -122,7 +122,8 @@ def show_image(
         # Thanks: https://stackoverflow.com/a/26720422/3486425
         cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
         if cbar_label is not None:
-            cbar.set_label(cbar_label, fontsize=16, rotation=-180)
+            cbar.ax.set_ylabel(cbar_label, fontsize=16, rotation=-180)
+
         # In case someone in the future wants to improve this:
         # https://joseph-long.com/writing/colorbars/
         # https://stackoverflow.com/a/33505522/3486425
