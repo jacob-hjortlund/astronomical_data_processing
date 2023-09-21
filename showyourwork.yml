@@ -181,6 +181,7 @@ datasets:
 # Custom file dependencies
 dependencies:
   src/scripts/random_bias_frames.py:
+    - src/scripts/utils.py
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
