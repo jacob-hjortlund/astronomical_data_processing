@@ -28,6 +28,7 @@ biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 fig, ax = plt.subplots(2, 2, figsize=(10, 10))
 ax = ax.flatten()
 for i, bias in enumerate(biases):
+    print(f"Mean bias {i + 1}: {np.mean(bias.data)}")
     utils.show_image(bias, fig=fig, ax=ax[i])
     ax[i].set_title(f"Bias {i + 1}", fontsize=16)
 
