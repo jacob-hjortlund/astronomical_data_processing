@@ -184,7 +184,7 @@ dependencies:
   - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
   - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
   - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
-  - src/data/raw_photometry/CALIB/EFOSC.2000-10-27T20:41:24.411.fits
+  - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
 
 # src/scripts/create_master_bias.py:
 #   - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
