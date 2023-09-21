@@ -8,7 +8,7 @@ DIM = 1030
 rng = np.random.default_rng(42)
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 files = [
-    "EFOSC.2000-12-28T22:11:19.687.fits",
+    "EFOSC.2000-12-29T22:09:43.891.fits",
     "EFOSC.2000-12-30T05:17:49.057.fits",
     "EFOSC.2000-12-28T22:09:41.589.fits",
     "EFOSC.2000-12-29T05:18:31.412.fits",
