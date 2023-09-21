@@ -180,6 +180,8 @@ datasets:
           EFOSC.2000-12-30T07:59:36.806.fits: src/data/raw_photometry/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
 # Custom file dependencies
 dependencies:
+  src/scripts/ex1_2.py:
+    - src/data/raw_photometry/CALIB
   # src/scripts/my_script.py:
   #   - src/data/dataset_for_my_script.dat
   src/tex/ms.tex:
