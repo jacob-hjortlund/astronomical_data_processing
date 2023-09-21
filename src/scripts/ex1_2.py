@@ -8,10 +8,10 @@ DIM = 1030
 rng = np.random.default_rng(42)
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 files = [
-    "EFOSC.2000-12-29T22:09:43.891.fits",
     "EFOSC.2000-12-30T05:17:49.057.fits",
-    "EFOSC.2000-12-28T22:09:41.589.fits",
-    "EFOSC.2000-12-29T05:18:31.412.fits",
+    "EFOSC.2000-12-29T04:39:50.783.fits",
+    "EFOSC.2000-12-28T22:11:19.687.fits",
+    "EFOSC.2000-12-30T04:19:55.000.fits",
 ]
 
 calib_collection = ccdp.ImageFileCollection(location=raw_calib_path, filenames=files)

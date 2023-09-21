@@ -181,10 +181,10 @@ datasets:
 # Custom file dependencies
 dependencies:
   src/scripts/ex1_2.py:
-  - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
-  - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
-  - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
-  - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
 
 # src/scripts/create_master_bias.py:
 #   - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
