@@ -334,9 +334,9 @@ def create_master(
         os.makedirs(save_path, exist_ok=True)
         save_path = Path(save_path)
 
-    if image_names is None and save:
+    if image_names is None:
         image_names = [f"{i}.fits" for i in range(len(images))]
-    elif image_names is str and save:
+    elif image_names is str:
         image_names = [f"{image_names}_{i}.fits" for i in range(len(images))]
     else:
         images = list(images)
