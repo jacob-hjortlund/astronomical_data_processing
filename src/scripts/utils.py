@@ -410,7 +410,7 @@ def preprocess_bias(
     return calibrated_biases
 
 
-def preprocess_darks(
+def preprocess_dark(
     images,
     master_bias,
     trim: int = 12,
@@ -436,7 +436,7 @@ def preprocess_darks(
     return calibrated_and_scaled_darks
 
 
-def preprocess_flats(
+def preprocess_flat(
     images,
     master_bias,
     master_dark,
