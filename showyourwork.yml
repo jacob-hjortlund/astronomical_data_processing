@@ -335,7 +335,7 @@ dependencies:
   src/scripts/master_bias_figure.py:
     - src/scripts/utils.py
     - src/scripts/create_master_biases.py
-    - src/data/process_photometry/CALIB/bias
+    - src/data/processed_photometry/CALIB/bias
 
   src/scripts/first_ron_estimates.py:
     - src/scripts/utils.py
@@ -345,7 +345,7 @@ dependencies:
   src/scripts/create_master_dark.py:
     - src/scripts/utils.py
     - src/scripts/create_master_biases.py
-    - src/data/process_photometry/CALIB/bias
+    - src/data/processed_photometry/CALIB/bias
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
@@ -720,7 +720,7 @@ tectonic_args: []
 # (such as to switch `minted` from `finalizecache` to `frozencache`)
 # The script will be passed a directory containing the manuscript source
 # as input, and should modify the contents of that directory in-place.
-# preprocess_arxiv_script: my_preprocess_script.sh
+# preprocessed_arxiv_script: my_preprocessed_script.sh
 
 # Enable verbose output?
 verbose: true
