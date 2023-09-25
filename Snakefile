@@ -1,3 +1,16 @@
+rule master_bias:
+    output:
+        directory("src/data/processed_photometry/CALIB/bias")
+    script:
+        "src/scripts/create_master_biases.py"
+
+rule master_dark:
+    output:
+        directory("src/data/processed_photometry/CALIB/darks")
+        "src/figures/master_dark.pdf"
+    script:
+        "src/scripts/create_master_dark.py"
+
 rule master_flats:
     output:
         directory("src/data/processed_photometry/CALIB/flats")
