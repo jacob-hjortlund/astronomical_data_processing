@@ -309,6 +309,22 @@ def create_master(
     except:
         raise ValueError("image_type must be one of 'bias', 'dark', or 'flat'")
 
+    clipping_methods = {
+        "sigma": "sigma_clipping",
+        "minmax": "minmax_clipping",
+        "extrema": "clip_extrema",
+    }
+    if clipping_method in clipping_methods.keys():
+        clipping_method = clipping_methods[clipping_method]
+
+    combining_methods = {
+        "average": "average_combine",
+        "median": "median_combine",
+        "sum": "sum_combine",
+    }
+    if combine_method in combining_methods.keys():
+        combine_method = combining_methods[combine_method]
+
     preprocessing_func = globals()["preprocess_" + base_type.lower()]
 
     if save:
@@ -334,9 +350,25 @@ def create_master(
     )
 
     combiner = ccdp.Combiner(calibrated_images)
-    getattr(combiner, clipping_method)(**clipping_kwargs)
 
-    master = getattr(combiner, combine_method)()
+    try:
+        getattr(combiner, clipping_method)(**clipping_kwargs)
+    except AttributeError as e:
+        print(e)
+        possible_values = ", ".join(
+            list(clipping_methods.keys()) + list(clipping_methods.values())
+        )
+        raise ValueError(f"clipping_method must be one of {possible_values}.")
+
+    try:
+        master = getattr(combiner, combine_method)()
+    except AttributeError as e:
+        print(e)
+        possible_values = ", ".join(
+            list(combining_methods.keys()) + list(combining_methods.values())
+        )
+        raise ValueError(f"combine_method must be one of {possible_values}.")
+
     master.meta["combined"] = "True"
     master.meta["object"] = image_type
 
@@ -361,7 +393,10 @@ def preprocess_bias(
 ):
     calibrated_biases = []
     for image, image_name in zip(images, image_names):
-        trimmed_bias = ccdp.trim_image(image[trim:-trim, trim:-trim])
+        if trim is not None:
+            trimmed_bias = ccdp.trim_image(image[trim:-trim, trim:-trim])
+        else:
+            trimmed_bias = image
         calibrated_bias = trimmed_bias  # TODO: Add overscan option
         calibrated_bias.meta["calibrated"] = "True"
 

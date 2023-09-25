@@ -33,5 +33,4 @@ for i, bias in enumerate(biases):
 
 fig.suptitle("Randomly Selected Bias Frames", fontsize=20)
 fig.tight_layout()
-
-plt.savefig(paths.figures / "random_bias_frames.pdf")
+fig.savefig(paths.figures / "random_bias_frames.pdf")
