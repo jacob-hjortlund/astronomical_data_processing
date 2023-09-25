@@ -315,10 +315,18 @@ rule master_dark:
         "src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:36:52.414.fits",
     output:
         directory("src/data/processed_photometry/CALIB/darks"),
-        "src/tex/figures/master_dark.pdf"
+    cache:
+        True
     script:
         "src/scripts/create_master_dark.py"
 
+master_dark_figure:
+    input:
+        "src/data/processed_photometry/CALIB/darks"
+    output:
+        "src/tex/figures/master_dark.pdf"
+    script:
+        "src/scripts/master_dark_figure.py"
 rule master_flats:
     input:
         "src/data/processed_photometry/CALIB/bias",
