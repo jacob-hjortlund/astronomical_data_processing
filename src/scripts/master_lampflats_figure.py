@@ -7,11 +7,14 @@ import matplotlib.pyplot as plt
 filters = ["V", "R"]
 master_skyflat_path = paths.data / "processed_photometry" / "CALIB" / "flats" / "lamp"
 
-fig, ax = plt.subplots(ncols=3, figsize=(15, 5))
+fig, ax = plt.subplots(ncols=2, figsize=(10, 5))
 
 for i, filter_name in enumerate(filters):
     filter_path = master_skyflat_path / filter_name
     master_skyflat = ccdp.CCDData.read(filter_path / "master_LAMPFLAT.fits")
+    master_skyflat = ccdp.trim_image(
+        master_skyflat[20:-20, 20:-20],
+    )
 
     utils.show_image(
         master_skyflat,
