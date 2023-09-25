@@ -687,7 +687,7 @@ dependencies:
     - src/scripts/utils.py
     - src/data/processed_photometry/SCIENCE/
   
-    src/scripts/science_lamp_image_figure.py:
+  src/scripts/science_lamp_image_figure.py:
     - src/scripts/utils.py
     - src/data/processed_photometry/SCIENCE/
 
