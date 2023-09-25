@@ -332,10 +332,14 @@ dependencies:
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
 
+  src/scripts/master_biases_stats_figure.py:
+    - src/scripts/utils.py
+    - src/data/processed_photometry/CALIB/bias/
+
   src/scripts/master_bias_figure.py:
     - src/scripts/utils.py
     - src/scripts/create_master_biases.py
-    - src/data/processed_photometry/CALIB/bias
+    - src/data/processed_photometry/CALIB/bias/
 
   src/scripts/first_ron_estimates.py:
     - src/scripts/utils.py

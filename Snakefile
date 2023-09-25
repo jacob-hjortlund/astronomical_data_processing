@@ -146,9 +146,18 @@ rule master_bias:
 
     output:
         directory("src/data/processed_photometry/CALIB/bias"),
-        "src/tex/figures/bias_frame_stats.pdf"
+    cache:
+        True
     script:
         "src/scripts/create_master_biases.py"
+
+rule master_bias_stats_figure:
+    input:
+        "src/data/processed_photometry/CALIB/bias"
+    output:
+        "src/tex/figures/master_bias_stats.pdf"
+    script:
+        "src/scripts/master_bias_stats_figure.py"
 
 rule master_bias_figure:
     input:
