@@ -4,7 +4,7 @@ rule master_flats:
     cache:
         True
     script:
-        "src/scripts/craete_master_flats.py"
+        "src/scripts/create_master_flats.py"
 
 rule master_lampflat:
     input:
