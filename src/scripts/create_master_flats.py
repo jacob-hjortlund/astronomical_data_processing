@@ -30,7 +30,6 @@ for flat_type in ["SKY", "LAMP"]:
     }
 
     flat_collection = calib_collection.filter(**flat_filter)
-    print(flat_collection.summary)
     filter_names = {
         filter_name[0]: filter_name
         for filter_name in flat_collection.summary.to_pandas()[
@@ -47,6 +46,7 @@ for flat_type in ["SKY", "LAMP"]:
             / flat_type.lower()
             / filter_name
         )
+        filter_name = filter_names[filter_name]
         filter_collection = flat_collection.filter(**{filter_name_column: filter_name})
         flats = list(filter_collection.ccds(ccd_kwargs={"unit": "adu"}))
         master_flat = utils.create_master(
