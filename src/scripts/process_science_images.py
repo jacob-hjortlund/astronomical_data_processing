@@ -55,6 +55,7 @@ for flat_type in ["SKY", "LAMP"]:
                 "More than one image found for filter name: " + filter_name + "."
             )
         image = images[0]
+        image = ccdp.trim_image(image[TRIM:-TRIM, TRIM:-TRIM])
         processed_image = ccdp.ccd_process(
             image,
             master_bias=master_bias,
