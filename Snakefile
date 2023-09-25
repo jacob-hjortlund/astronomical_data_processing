@@ -1,4 +1,6 @@
 rule master_bias:
+    input:
+        "src/data/raw_photometry/CALIB"
     output:
         directory("src/data/processed_photometry/CALIB/bias")
     script:
@@ -13,6 +15,9 @@ rule master_bias_figure:
         "src/scripts/master_bias_figure.py"
 
 rule master_dark:
+    input:
+        "src/data/raw_photometry/CALIB",
+        "src/data/processed_photometry/CALIB/bias"
     output:
         directory("src/data/processed_photometry/CALIB/darks"),
         "src/figures/master_dark.pdf"
@@ -20,6 +25,10 @@ rule master_dark:
         "src/scripts/create_master_dark.py"
 
 rule master_flats:
+    input:
+        "src/data/raw_photometry/CALIB",
+        "src/data/processed_photometry/CALIB/bias",
+        "src/data/processed_photometry/CALIB/darks"
     output:
         directory("src/data/processed_photometry/CALIB/flats")
     # cache:
