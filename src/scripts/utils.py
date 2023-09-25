@@ -11,6 +11,7 @@ from astropy.stats import mad_std
 from astropy.nddata.blocks import block_reduce
 from astropy.nddata.utils import Cutout2D
 
+default_colors = sns.color_palette("colorblind")
 default_cmap = sns.color_palette("mako", as_cmap=True)
 
 
