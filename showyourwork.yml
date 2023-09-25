@@ -641,15 +641,17 @@ dependencies:
   src/scripts/master_skyflats_figure.py:
     - src/scripts/utils.py
     - src/scripts/create_master_flats.py
-    - src/data/processed_photometry/CALIB/flats/sky/B/master_SKYFLAT.fits
-    - src/data/processed_photometry/CALIB/flats/sky/V/master_SKYFLAT.fits
-    - src/data/processed_photometry/CALIB/flats/sky/R/master_SKYFLAT.fits
+    - src/data/processed_photometry/CALIB/flats/
+    # - src/data/processed_photometry/CALIB/flats/sky/B/master_SKYFLAT.fits
+    # - src/data/processed_photometry/CALIB/flats/sky/V/master_SKYFLAT.fits
+    # - src/data/processed_photometry/CALIB/flats/sky/R/master_SKYFLAT.fits
   
   src/scripts/master_lampflats_figure.py:
     - src/scripts/utils.py
     - src/scripts/create_master_flats.py
-    - src/data/processed_photometry/CALIB/flats/lamp/V/master_LAMPFLAT.fits
-    - src/data/processed_photometry/CALIB/flats/lamp/R/master_LAMPFLAT.fits
+    - src/data/processed_photometry/CALIB/flats/
+    # - src/data/processed_photometry/CALIB/flats/lamp/V/master_LAMPFLAT.fits
+    # - src/data/processed_photometry/CALIB/flats/lamp/R/master_LAMPFLAT.fits
 
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
