@@ -35,7 +35,9 @@ for flat_type in ["SKY", "LAMP"]:
     master_flat = ccdp.CCDData.read(master_flat_path)
     master_flat = ccdp.trim_image(master_flat[TRIM:-TRIM, TRIM:-TRIM])
 
-    for filter_name in filter_names.keys():
+    for filter_name in ["B", "V", "R"]:
+        if filter_name not in filter_names.keys():
+            continue
         filter_save_path = save_path = (
             paths.data / "processed_photometry" / "SCIENCE" / filter_name
         )
