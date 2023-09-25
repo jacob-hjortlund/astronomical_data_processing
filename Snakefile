@@ -6,7 +6,7 @@ rule master_bias:
 
 rule master_dark:
     output:
-        directory("src/data/processed_photometry/CALIB/darks")
+        directory("src/data/processed_photometry/CALIB/darks"),
         "src/figures/master_dark.pdf"
     script:
         "src/scripts/create_master_dark.py"
