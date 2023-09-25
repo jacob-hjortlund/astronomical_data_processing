@@ -45,12 +45,12 @@ ax[0].errorbar(
 )
 ax[0].set_xlabel("Number of Biases Frames", fontsize=16)
 ax[0].set_ylabel("Mean [ADU]", fontsize=16)
-ax[0].set_title("Mean Signal vs. Number of Bias Frames", fontsize=20)
+ax[0].set_title("Mean Signal vs. Frames", fontsize=20)
 
 ax[1].scatter(np.arange(n_frames) + 1, stds, color=utils.default_colors[0])
 ax[1].set_xlabel("Number of Biases Frames", fontsize=16)
 ax[1].set_ylabel("Standard Deviation [ADU]", fontsize=16)
-ax[1].set_title("Standard Deviation vs. Number of Bias Frames", fontsize=20)
+ax[1].set_title("STD vs. Frames", fontsize=20)
 fig.tight_layout()
 fig.savefig(paths.figures / "bias_frame_stats.pdf")
 
