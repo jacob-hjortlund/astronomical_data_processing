@@ -67,5 +67,7 @@ for flat_type in ["SKY", "LAMP"]:
             error=True,
         )
 
-        save_path = filter_save_path / ("processed_" + filter_name + "_image.fits")
+        save_path = filter_save_path / (
+            "processed_" + filter_name + "_" + flat_type.lower() + "_image.fits"
+        )
         processed_image.write(save_path, overwrite=True)
