@@ -1,8 +1,8 @@
 rule master_flats:
     output:
         directory("src/data/processed_photometry/CALIB/flats")
-    cache:
-        True
+    # cache:
+    #     True
     script:
         "src/scripts/create_master_flats.py"
 
