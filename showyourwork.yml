@@ -187,7 +187,7 @@ dependencies:
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
 
-  src/scripts/create_master_bias.py:
+  src/scripts/create_master_biases.py:
     - src/scripts/utils.py
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
@@ -331,6 +331,11 @@ dependencies:
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
+
+  src/scripts/master_bias_figure.py:
+    - src/scripts/utils.py
+    - src/scripts/create_master_biases.py
+    - src/data/processed_photometry/CALIB/bias/master_BIAS.fits
 
   src/scripts/first_ron_estimates.py:
     - src/scripts/utils.py
