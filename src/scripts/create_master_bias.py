@@ -25,8 +25,13 @@ master_biases = []
 means = np.zeros(n_frames)
 stds = np.zeros(n_frames)
 for i in range(n_frames):
+    if i != n_frames - 1:
+        save = False
+    else:
+        save = True
+
     master_bias = utils.create_master(
-        biases[: i + 1], image_type="BIAS", save=True, save_path=save_path
+        biases[: i + 1], image_type="BIAS", save=save, save_path=save_path
     )
     master_bias_data = master_bias.data[TRIM:-TRIM, TRIM:-TRIM]
     means[i] = np.mean(master_bias_data)
@@ -49,7 +54,7 @@ for i in range(n_frames):
 # fig.savefig(paths.figures / "bias_frame_stats.pdf")
 
 fig, ax = plt.subplots(figsize=(10, 10))
-utils.show_image(master_bias, fig=fig, ax=ax, cbar_label="Signal [ADU]")
+utils.show_image(master_biases[-1], fig=fig, ax=ax, cbar_label="Signal [ADU]")
 ax.set_title("Master Bias", fontsize=20)
 ax.set_xlabel("X [pixels]", fontsize=16)
 ax.set_ylabel("Y [pixels]", fontsize=16)
