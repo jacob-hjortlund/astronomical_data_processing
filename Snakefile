@@ -496,3 +496,15 @@ rule master_skyflat:
         "src/tex/figures/master_skyflat.pdf"
     script:
         "src/scripts/master_skyflats_figure.py"
+rule process_science_images:
+    input:
+        "src/data/processed_photometry/CALIB/bias",
+        "src/data/processed_photometry/CALIB/darks",
+        "src/data/processed_photometry/CALIB/flats",
+        "src/data/raw_photometry/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits"
+        "src/data/raw_photometry/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits"
+        "src/data/raw_photometry/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits"
+    output:
+        directory("src/data/processed_photometry/SCIENCE")
+    script:
+        "src/scripts/process_science_images.py"
