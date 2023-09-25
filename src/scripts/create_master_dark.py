@@ -11,9 +11,8 @@ DIM = 1030
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 save_path = paths.data / "processed_photometry" / "CALIB" / "darks"
 master_bias_path = (
-    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS.fits"
+    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS_40.fits"
 )
-
 
 calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 master_bias = ccdp.CCDData.read(master_bias_path, unit="adu")
@@ -30,14 +29,6 @@ darks = list(dark_collection.ccds(ccd_kwargs={"unit": "adu"}))
 master_dark = utils.create_master(
     darks, image_type="DARK", save=True, save_path=save_path, master_bias=master_bias
 )
-
-fig, ax = plt.subplots(figsize=(10, 10))
-utils.show_image(master_dark, fig=fig, ax=ax, cbar_label="Signal [ADU]")
-ax.set_title("Master Dark", fontsize=20)
-ax.set_xlabel("X [pixels]", fontsize=16)
-ax.set_ylabel("Y [pixels]", fontsize=16)
-fig.tight_layout()
-fig.savefig(paths.figures / "master_dark.pdf")
 
 # fig, ax = plt.subplots(ncols=2, nrows=2, figsize=(10, 10))
 # ax.flatten()
