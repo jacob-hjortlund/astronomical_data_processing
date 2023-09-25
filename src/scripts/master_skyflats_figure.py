@@ -25,4 +25,4 @@ for i, filter_name in enumerate(filters):
 
 fig.suptitle("Master Sky Flats", fontsize=24)
 fig.tight_layout()
-fig.savefig(paths.figures / "master_skyflats.pdf")
+fig.savefig(paths.figures / "master_skyflat.pdf")
