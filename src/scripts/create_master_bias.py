@@ -34,7 +34,7 @@ for i in range(n_frames):
     master_bias = utils.create_master(
         biases[: i + 1], image_type="BIAS", save=save, save_path=save_path
     )
-    master_bias_data = master_bias.data[TRIM:-TRIM, TRIM:-TRIM]
+    master_bias_data = master_bias.data.copy()[TRIM:-TRIM, TRIM:-TRIM]
     means[i] = np.mean(master_bias_data)
     stds[i] = np.std(master_bias_data) / np.sqrt(i + 1)
     master_biases.append(master_bias)
