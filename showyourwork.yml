@@ -662,6 +662,8 @@ dependencies:
     # - src/data/processed_photometry/CALIB/flats/lamp/V/master_LAMPFLAT.fits
     # - src/data/processed_photometry/CALIB/flats/lamp/R/master_LAMPFLAT.fits
 
+  src/tex/ms.tex:
+    - src/tex/figures/master_dark.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
