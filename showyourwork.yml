@@ -683,6 +683,10 @@ dependencies:
     - src/data/raw_photometry/SCIENCE/EFOSC.2001-01-03T08:55:18.187.fits
     - src/data/raw_photometry/SCIENCE/EFOSC.2001-01-03T08:56:03.899.fits
 
+  src/scripts/science_sky_image_figure.py:
+    - src/scripts/utils.py
+    - src/data/processed_photometry/SCIENCE/
+
   src/tex/ms.tex:
     - src/tex/figures/master_dark.pdf
     - src/tex/figures/master_skyflat.pdf

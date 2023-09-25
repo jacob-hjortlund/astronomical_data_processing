@@ -508,3 +508,10 @@ rule process_science_images:
         directory("src/data/processed_photometry/SCIENCE")
     script:
         "src/scripts/process_science_images.py"
+rule science_sky_image_figure:
+    input:
+        "src/data/processed_photometry/SCIENCE"
+    output:
+        "src/tex/figures/science_sky_cal.pdf"
+    script:
+        "src/scripts/science_sky_image_figure.py"
