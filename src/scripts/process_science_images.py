@@ -30,7 +30,7 @@ filter_names = {
 
 for flat_type in ["SKY", "LAMP"]:
     for filter_name in ["B", "V", "R"]:
-        if filter_name not in filter_names.keys():
+        if filter_name == "B" and flat_type == "LAMP":
             continue
 
         master_flat_path = (
