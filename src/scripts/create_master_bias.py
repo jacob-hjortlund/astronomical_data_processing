@@ -33,20 +33,20 @@ for i in range(n_frames):
     stds[i] = np.std(master_bias_data) / np.sqrt(i + 1)
     master_biases.append(master_bias)
 
-fig, ax = plt.subplots(ncols=2, figsize=(10, 5))
-ax[0].errorbar(
-    np.arange(n_frames) + 1, means, yerr=stds, fmt="o", color=utils.default_colors[0]
-)
-ax[0].set_xlabel("Number of Biases Frames", fontsize=16)
-ax[0].set_ylabel("Mean [ADU]", fontsize=16)
-ax[0].set_title("Mean Signal vs. Number of Bias Frames", fontsize=20)
+# fig, ax = plt.subplots(ncols=2, figsize=(10, 5))
+# ax[0].errorbar(
+#     np.arange(n_frames) + 1, means, yerr=stds, fmt="o", color=utils.default_colors[0]
+# )
+# ax[0].set_xlabel("Number of Biases Frames", fontsize=16)
+# ax[0].set_ylabel("Mean [ADU]", fontsize=16)
+# ax[0].set_title("Mean Signal vs. Number of Bias Frames", fontsize=20)
 
-ax[1].scatter(np.arange(n_frames) + 1, stds, color=utils.default_colors[0])
-ax[1].set_xlabel("Number of Biases Frames", fontsize=16)
-ax[1].set_ylabel("Standard Deviation [ADU]", fontsize=16)
-ax[1].set_title("Standard Deviation vs. Number of Bias Frames", fontsize=20)
-fig.tight_layout()
-fig.savefig(paths.figures / "bias_frame_stats.pdf")
+# ax[1].scatter(np.arange(n_frames) + 1, stds, color=utils.default_colors[0])
+# ax[1].set_xlabel("Number of Biases Frames", fontsize=16)
+# ax[1].set_ylabel("Standard Deviation [ADU]", fontsize=16)
+# ax[1].set_title("Standard Deviation vs. Number of Bias Frames", fontsize=20)
+# fig.tight_layout()
+# fig.savefig(paths.figures / "bias_frame_stats.pdf")
 
 fig, ax = plt.subplots(figsize=(10, 10))
 utils.show_image(master_bias, fig=fig, ax=ax, cbar_label="Signal [ADU]")
