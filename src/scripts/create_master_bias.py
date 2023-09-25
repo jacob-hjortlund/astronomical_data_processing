@@ -24,12 +24,15 @@ n_frames = len(biases)
 master_biases = []
 means = np.zeros(n_frames)
 stds = np.zeros(n_frames)
-for i in range(n_frames):
+for i in range(3, n_frames):
     if i != n_frames - 1:
         save = False
     else:
         save = True
 
+    biases_subset = biases[: i + 1]
+    print(f"\nType: {type(biases_subset)}")
+    print(f"Creating master bias from {len(biases_subset)} frames")
     master_bias = utils.create_master(
         biases[: i + 1], image_type="BIAS", save=save, save_path=save_path
     )
