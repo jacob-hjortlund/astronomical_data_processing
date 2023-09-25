@@ -686,6 +686,10 @@ dependencies:
   src/scripts/science_sky_image_figure.py:
     - src/scripts/utils.py
     - src/data/processed_photometry/SCIENCE/
+  
+    src/scripts/science_lamp_image_figure.py:
+    - src/scripts/utils.py
+    - src/data/processed_photometry/SCIENCE/
 
   src/tex/ms.tex:
     - src/tex/figures/master_dark.pdf

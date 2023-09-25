@@ -515,3 +515,10 @@ rule science_sky_image_figure:
         "src/tex/figures/science_sky_cal.pdf"
     script:
         "src/scripts/science_sky_image_figure.py"
+rule science_lamp_image_figure:
+    input:
+        "src/data/processed_photometry/SCIENCE"
+    output:
+        "src/tex/figures/science_lamp_cal.pdf"
+    script:
+        "src/scripts/science_lamp_image_figure.py"
