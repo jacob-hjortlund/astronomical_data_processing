@@ -4,7 +4,7 @@ import utils
 import ccdproc as ccdp
 import matplotlib.pyplot as plt
 
-filters = ["B", "V", "R"]
+filters = ["V", "R"]
 master_skyflat_path = paths.data / "processed_photometry" / "CALIB" / "flats" / "lamp"
 
 fig, ax = plt.subplots(ncols=3, figsize=(15, 5))
