@@ -30,7 +30,7 @@ filter_names = {
 
 for flat_type in ["SKY", "LAMP"]:
     master_flat_path = (
-        flats_path / flat_type.lower() / "master_" + flat_type + "FLAT.fits"
+        flats_path / flat_type.lower() / ("master_" + flat_type + "FLAT.fits")
     )
     master_flat = ccdp.CCDData.read(master_flat_path)
     master_flat = ccdp.trim_image(master_flat[TRIM:-TRIM, TRIM:-TRIM])
