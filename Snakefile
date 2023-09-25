@@ -320,7 +320,7 @@ rule master_dark:
     script:
         "src/scripts/create_master_dark.py"
 
-master_dark_figure:
+rule master_dark_figure:
     input:
         "src/data/processed_photometry/CALIB/darks"
     output:
