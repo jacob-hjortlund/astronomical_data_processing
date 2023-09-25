@@ -474,7 +474,7 @@ def preprocess_flat(
             dark_subtracted_flat = bias_subtracted_flat
 
         calibrated_and_scaled_flat = dark_subtracted_flat.multiply(
-            1.0 / np.ma.median(dark_subtracted_flat)
+            1.0 / np.ma.median(dark_subtracted_flat.data[20:-20, 20:-20])
         )
 
         calibrated_and_scaled_flat.meta["calibrated"] = "True"
