@@ -314,7 +314,7 @@ rule master_flats:
     input:
         "src/data/processed_photometry/CALIB/bias",
         "src/data/processed_photometry/CALIB/darks",
-                "src/scripts/utils.py",
+        "src/scripts/utils.py",
         "src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits",
         "src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits",
         "src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:09:41.589.fits",
