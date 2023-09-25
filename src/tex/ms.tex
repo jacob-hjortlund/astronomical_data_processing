@@ -64,6 +64,17 @@ Pellentesque cursus luctus mauris \citep{Luger2021}.
 \end{figure}
 
 \begin{figure}[ht!]
+    \script{first_ron_estimates.py}
+    \begin{centering}
+        \includegraphics[width=\linewidth]{figures/bias_frame_distributions.pdf}
+        \caption{
+            INSTERT CAPTION
+        }
+        \label{fig:master_bias}
+    \end{centering}
+\end{figure}
+
+\begin{figure}[ht!]
     \script{create_master_bias.py}
     \begin{centering}
         \includegraphics[width=\linewidth]{figures/master_bias.pdf}
@@ -75,11 +86,11 @@ Pellentesque cursus luctus mauris \citep{Luger2021}.
 \end{figure}
 
 \begin{figure}[ht!]
-    \script{first_ron_estimates.py}
+    \script{create_master_bias.py}
     \begin{centering}
-        \includegraphics[width=\linewidth]{figures/bias_frame_distributions.pdf}
+        \includegraphics[width=\linewidth]{figures/bias_frame_stats.pdf}
         \caption{
-            INSTERT CAPTION
+            Master Bias frames created using 1-40 frames. Outliers excluded using $\sigma$-clipping with median and MAD-STD with $\pm3\sigma$-thresholds. Frames combined using averaging.
         }
         \label{fig:master_bias}
     \end{centering}
