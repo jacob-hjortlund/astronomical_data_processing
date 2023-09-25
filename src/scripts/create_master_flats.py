@@ -13,14 +13,14 @@ raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 master_bias_path = (
     paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS.fits"
 )
-master_dark_path = (
-    paths.data / "processed_photometry" / "CALIB" / "darks" / "master_DARK.fits"
-)
+# master_dark_path = (
+#     paths.data / "processed_photometry" / "CALIB" / "darks" / "master_DARK.fits"
+# )
 
 
 calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 master_bias = ccdp.CCDData.read(master_bias_path)
-master_dark = ccdp.CCDData.read(master_dark_path)
+# master_dark = ccdp.CCDData.read(master_dark_path)
 
 for flat_type in ["SKY", "LAMP"]:
     flat_filter = {
@@ -55,5 +55,5 @@ for flat_type in ["SKY", "LAMP"]:
             save=True,
             save_path=filter_save_path,
             master_bias=master_bias,
-            master_dark=master_dark,
+            # master_dark=master_dark,
         )

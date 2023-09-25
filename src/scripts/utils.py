@@ -444,7 +444,7 @@ def preprocess_dark(
 def preprocess_flat(
     images,
     master_bias,
-    master_dark,
+    master_dark=None,
     trim: int = 12,
     exptime_key: str = "EXPTIME",
     save: bool = False,
@@ -458,16 +458,20 @@ def preprocess_flat(
             trimmed_flat = ccdp.trim_image(image[trim:-trim, trim:-trim])
         else:
             trimmed_flat = image
-        bias_subtracted_flat = ccdp.subtract_bias(trimmed_flat, master_bias)
+            bias_subtracted_flat = ccdp.subtract_bias(trimmed_flat, master_bias)
+
         # tmp_master_dark = ccdp.gain_correct(master_dark.copy(), 1.0 * u.second)
 
-        dark_subtracted_flat = ccdp.subtract_dark(
-            bias_subtracted_flat,
-            master_dark,
-            dark_exposure=1.0 * u.second,
-            data_exposure=image.header[exptime_key] * u.second,
-            scale=True,
-        )
+        if master_dark is not None:
+            dark_subtracted_flat = ccdp.subtract_dark(
+                bias_subtracted_flat,
+                master_dark,
+                dark_exposure=1.0 * u.second,
+                data_exposure=image.header[exptime_key] * u.second,
+                scale=True,
+            )
+        else:
+            dark_subtracted_flat = bias_subtracted_flat
 
         calibrated_and_scaled_flat = dark_subtracted_flat.multiply(
             1.0 / np.ma.median(dark_subtracted_flat)
