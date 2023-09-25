@@ -664,6 +664,7 @@ dependencies:
 
   src/tex/ms.tex:
     - src/tex/figures/master_dark.pdf
+    - src/tex/figures/master_skyflat.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
