@@ -2,7 +2,8 @@ rule master_bias:
     input:
         "src/data/raw_photometry/CALIB"
     output:
-        directory("src/data/processed_photometry/CALIB/bias")
+        directory("src/data/processed_photometry/CALIB/bias"),
+        "src/figures/bias_frame_stats.pdf"
     script:
         "src/scripts/create_master_biases.py"
 
