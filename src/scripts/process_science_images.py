@@ -63,6 +63,8 @@ for flat_type in ["SKY", "LAMP"]:
             gain=GAIN,
             readnoise=RDNOISE,
             gain_corrected=False,
+            error=True,
         )
 
         save_path = filter_save_path / ("processed_" + filter_name + "_image.fits")
+        processed_image.write(save_path, overwrite=True)
