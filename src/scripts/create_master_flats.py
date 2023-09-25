@@ -11,7 +11,7 @@ DIM = 1030
 filter_name_column = "eso ins filt1 name"
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 master_bias_path = (
-    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS.fits"
+    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS_40.fits"
 )
 # master_dark_path = (
 #     paths.data / "processed_photometry" / "CALIB" / "darks" / "master_DARK.fits"

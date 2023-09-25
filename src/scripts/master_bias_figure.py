@@ -4,7 +4,7 @@ import ccdproc as ccdp
 import matplotlib.pyplot as plt
 
 master_bias = ccdp.CCDData.read(
-    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS.fits",
+    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS_40.fits",
     unit="adu",
 )
 
