@@ -45,9 +45,10 @@ for flat_type in ["SKY", "LAMP"]:
         filter_save_path = save_path = (
             paths.data / "processed_photometry" / "SCIENCE" / filter_name
         )
-        filter_name = filter_names[filter_name]
+        os.makedirs(filter_save_path, exist_ok=True)
+
         filter_collection = science_collection.filter(
-            **{filter_name_column: filter_name}
+            **{filter_name_column: filter_names[filter_name]}
         )
         images = list(filter_collection.ccds(ccd_kwargs={"unit": "adu"}))
         if len(images) > 1:
