@@ -342,8 +342,9 @@ dependencies:
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
 
-  src/scripts/calibrate_darks.py:
+  src/scripts/create_master_dark.py:
     - src/scripts/utils.py
+    - src/scripts/create_master_biases.py
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:09:41.589.fits

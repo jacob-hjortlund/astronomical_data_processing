@@ -372,6 +372,7 @@ def create_master(
 
     master.meta["combined"] = "True"
     master.meta["object"] = image_type
+    master.meta["is_master"] = "True"
 
     master_name = f"master_{image_type}"
     if name_modifiers is not None:
