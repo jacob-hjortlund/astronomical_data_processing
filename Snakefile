@@ -4,6 +4,14 @@ rule master_bias:
     script:
         "src/scripts/create_master_biases.py"
 
+rule master_bias_figure:
+    input:
+        "src/data/processed_photometry/CALIB/bias"
+    output:
+        "src/figures/master_bias.pdf"
+    script:
+        "src/scripts/master_bias_figure.py"
+
 rule master_dark:
     output:
         directory("src/data/processed_photometry/CALIB/darks"),

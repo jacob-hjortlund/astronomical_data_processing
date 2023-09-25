@@ -335,6 +335,7 @@ dependencies:
   src/scripts/master_bias_figure.py:
     - src/scripts/utils.py
     - src/scripts/create_master_biases.py
+    - src/data/process_photometry/CALIB/bias
 
   src/scripts/first_ron_estimates.py:
     - src/scripts/utils.py
