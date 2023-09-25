@@ -1,6 +1,6 @@
 rule master_flats:
     output:
-        directory("src/data/processsed_photometry/CALIB/flats")
+        directory("src/data/processed_photometry/CALIB/flats")
     cache:
         True
     script:
@@ -8,7 +8,7 @@ rule master_flats:
 
 rule master_lampflat:
     input:
-        "src/data/processsed_photometry/CALIB/flats"
+        "src/data/processed_photometry/CALIB/flats"
     output:
         "src/figures/master_lampflat.pdf"
     script:
@@ -16,7 +16,7 @@ rule master_lampflat:
 
 rule master_skyflat:
     input:
-        "src/data/processsed_photometry/CALIB/flats"
+        "src/data/processed_photometry/CALIB/flats"
     output:
         "src/figures/master_skyflat.pdf"
     script:
