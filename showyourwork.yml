@@ -333,9 +333,9 @@ dependencies:
     - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
 
   src/scripts/first_ron_estimates.py:
-      - src/scripts/utils.py
-      - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
-      - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
+    - src/scripts/utils.py
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
+    - src/data/raw_photometry/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
 
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
