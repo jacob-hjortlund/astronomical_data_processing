@@ -393,6 +393,7 @@ def preprocess_bias(
     save_path: str = None,
     image_names: list = None,
 ):
+    images = list(images)
     calibrated_biases = []
     for image, image_name in zip(images, image_names):
         if trim is not None:
@@ -419,9 +420,13 @@ def preprocess_dark(
     save_path: str = None,
     image_names: list = None,
 ):
+    images = list(images)
     calibrated_and_scaled_darks = []
     for image, image_name in zip(images, image_names):
-        trimmed_dark = ccdp.trim_image(image[trim:-trim, trim:-trim])
+        if trim is not None:
+            trimmed_dark = ccdp.trim_image(image[trim:-trim, trim:-trim])
+        else:
+            trimmed_dark = image
         bias_subtracted_dark = ccdp.subtract_bias(trimmed_dark, master_bias)
         exptime_m1 = 1.0 / image.header[exptime_key] * u.second
 
@@ -446,22 +451,26 @@ def preprocess_flat(
     save_path: str = None,
     image_names: list = None,
 ):
+    images = list(images)
     calibrated_and_scaled_flats = []
     for image, image_name in zip(images, image_names):
-        trimmed_lampflat = ccdp.trim_image(image[trim:-trim, trim:-trim])
-        bias_subtracted_lampflat = ccdp.subtract_bias(trimmed_lampflat, master_bias)
+        if trim is not None:
+            trimmed_flat = ccdp.trim_image(image[trim:-trim, trim:-trim])
+        else:
+            trimmed_flat = image
+        bias_subtracted_flat = ccdp.subtract_bias(trimmed_flat, master_bias)
         tmp_master_dark = ccdp.gain_correct(master_dark.copy(), 1.0 * u.second)
 
-        dark_subtracted_lampflat = ccdp.subtract_dark(
-            bias_subtracted_lampflat,
+        dark_subtracted_flat = ccdp.subtract_dark(
+            bias_subtracted_flat,
             tmp_master_dark,
             dark_exposure=1.0 * u.second,
             data_exposure=image.header[exptime_key] * u.second,
             scale=True,
         )
 
-        calibrated_and_scaled_flat = dark_subtracted_lampflat.multiply(
-            1.0 / np.ma.median(dark_subtracted_lampflat)
+        calibrated_and_scaled_flat = dark_subtracted_flat.multiply(
+            1.0 / np.ma.median(dark_subtracted_flat)
         )
 
         calibrated_and_scaled_flat.meta["calibrated"] = "True"
