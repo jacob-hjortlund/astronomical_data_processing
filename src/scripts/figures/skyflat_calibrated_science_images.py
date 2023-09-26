@@ -36,7 +36,7 @@ ax[1, 0].set_ylabel("V", fontsize=24)
 ax[2, 0].set_ylabel("R", fontsize=24)
 ax[2, 0].set_xlabel("X [pixels]", fontsize=24)
 ax[2, 1].set_xlabel("X [pixels]", fontsize=24)
-fig.suptitle("Sky Flat Calibrated Science Images", fontsize=24)
+fig.suptitle("Sky Flat Reduced Science Images", fontsize=24)
 fig.tight_layout()
 fig.savefig(
     paths.figures / "skyflat_calibrated_science_images.pdf",

@@ -35,9 +35,9 @@ ax[0, 0].set_ylabel("V", fontsize=24)
 ax[1, 0].set_ylabel("R", fontsize=24)
 ax[1, 0].set_xlabel("X [pixels]", fontsize=24)
 ax[1, 1].set_xlabel("X [pixels]", fontsize=24)
-fig.suptitle("Lamp Flat Calibrated Science Images", fontsize=24)
+fig.suptitle("Lamp Flat Reduced Standard Star Images", fontsize=24)
 fig.tight_layout()
 fig.savefig(
-    paths.figures / "lampflat_calibrated_science_images.pdf",
+    paths.figures / "lampflat_calibrated_standard_star_images.pdf",
     bbox_inches="tight",
 )
