@@ -366,8 +366,8 @@ dependencies:
   #   - src/data/raw_photometry/
   #   - src/scripts/figures/figure_utils.py
 
-  # src/tex/ms.tex:
-  #   - src/data/raw_photometry/
+  src/tex/ms.tex:
+    - src/data/raw_photometry/
   #   - src/tex/figures/master_dark.pdf
   #   - src/tex/figures/master_skyflat.pdf
   #   - src/data/processed_photometry/SCIENCE/
