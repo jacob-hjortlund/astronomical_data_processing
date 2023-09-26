@@ -10,4 +10,4 @@ for folder in zenodo_path.iterdir():
         for file in folder.iterdir():
             if file.is_file():
                 file.rename(new_folder_path / file.name)
-        folder.rmdir()
+        # folder.rmdir()

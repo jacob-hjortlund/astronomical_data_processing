@@ -353,9 +353,9 @@ dependencies:
 
   src/scripts/process_science_images.py:
     - src/data/raw_photometry/
-    - src/data/processed_photometry/CALIB/bias/
-    - src/data/processed_photometry/CALIB/darks/
-    - src/data/processed_photometry/CALIB/flats/
+    - src/data/processed_photometry/calibration/bias/
+    - src/data/processed_photometry/calibration/darks/
+    - src/data/processed_photometry/calibration/flats/
     - src/scripts/intermediate_results/processing_utils.py
 
   # -------------------- FIGURES -------------------- #
