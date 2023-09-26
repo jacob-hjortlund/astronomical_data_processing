@@ -1,3 +1,5 @@
+# ------------------------------- PREPROCESSING ------------------------------- #
+
 rule download_raw_data:
     input:
         "src/data/raw_photometry/CALIB/EFOSC.2000-12-28T22:11:19.687.fits",
@@ -157,7 +159,8 @@ rule download_raw_data:
 
 rule create_master_biases:
     input:
-        "src/data/raw_photometry"
+        "src/data/raw_photometry",
+        "src/scripts/intermediate_results/processing_utils.py"
     output:
         directory("src/data/processed_photometry/calibration/bias"),
     cache:
@@ -168,7 +171,8 @@ rule create_master_biases:
 rule create_master_dark:
     input:
         "src/data/raw_photometry",
-        "src/data/process_photometry/calibration/bias"
+        "src/data/process_photometry/calibration/bias",
+        "src/scripts/intermediate_results/processing_utils.py"
     output:
         directory("src/data/processed_photometry/calibration/darks"),
     cache:
@@ -180,10 +184,38 @@ rule create_master_flats:
     input:
         "src/data/raw_photometry",
         "src/data/process_photometry/calibration/bias",
-        "src/data/process_photometry/calibration/darks"
+        "src/data/process_photometry/calibration/darks",
+        "src/scripts/intermediate_results/processing_utils.py"
     output:
         directory("src/data/processed_photometry/calibration/flats"),
     cache:
         True
     script:
         "src/scripts/intermediate_results/create_master_flats.py"
+
+rule process_science_images:
+    input:
+        "src/data/raw_photometry",
+        "src/data/process_photometry/calibration/bias",
+        "src/data/process_photometry/calibration/darks",
+        "src/data/process_photometry/calibration/flats",
+        "src/scripts/intermediate_results/processing_utils.py"
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/science/observations"),
+    script:
+        "src/scripts/intermediate_results/process_science_images.py"
+
+# ------------------------------- FIGURES ------------------------------- #
+
+rule random_bias_frames:
+    input:
+        "src/data/raw_photometry",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        directory("src/figures/random_bias_frames.pdf"),
+    script:
+        "src/scripts/figures/random_bias_frames.py"
+
+# ------------------------------- NUMBERS ------------------------------- #

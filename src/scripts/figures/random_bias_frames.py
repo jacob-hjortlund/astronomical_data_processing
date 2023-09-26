@@ -1,7 +1,7 @@
 import paths
-import utils
 import numpy as np
 import ccdproc as ccdp
+import figure_utils as utils
 import matplotlib.pyplot as plt
 
 DIM = 1030
