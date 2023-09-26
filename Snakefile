@@ -212,6 +212,8 @@ rule random_bias_frames:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/random_bias_frames.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/random_bias_frames.py"
 
@@ -221,6 +223,8 @@ rule bias_frame_histograms:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/bias_frame_histograms.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/bias_frame_histograms.py"
 rule master_bias_frame:
@@ -229,6 +233,8 @@ rule master_bias_frame:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/master_bias_frame.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/master_bias_frame.py"
 rule master_bias_stds:
@@ -237,6 +243,8 @@ rule master_bias_stds:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/master_bias_stds.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/master_bias_stds.py"
 rule master_dark_frame:
@@ -245,6 +253,8 @@ rule master_dark_frame:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/master_dark_frame.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/master_dark_frame.py"
 rule master_lampflat_frames:
@@ -253,6 +263,8 @@ rule master_lampflat_frames:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/master_lampflat_frames.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/master_lampflat_frames.py"
 rule master_skyflat_frames:
@@ -261,6 +273,8 @@ rule master_skyflat_frames:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/master_skyflat_frames.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/master_skyflat_frames.py"
 rule lampflat_calibrated_science_images:
@@ -269,6 +283,8 @@ rule lampflat_calibrated_science_images:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/lampflat_calibrated_science_images.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/lampflat_calibrated_science_images.py"
 rule skyflat_calibrated_science_images:
@@ -277,6 +293,8 @@ rule skyflat_calibrated_science_images:
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/skyflat_calibrated_science_images.pdf",
+    cache:
+        True
     script:
         "src/scripts/figures/skyflat_calibrated_science_images.py"
 
