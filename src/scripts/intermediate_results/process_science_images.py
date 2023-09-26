@@ -13,7 +13,7 @@ RDNOISE = 7.19 * u.adu * GAIN
 filter_name_column = "eso ins filt1 name"
 flats_path = paths.data / "processed_photometry" / "calibration" / "flats"
 master_bias_path = (
-    paths.data / "processed_photometry" / "calibration" / "bias" / "master_BIAS_40.fits"
+    paths.data / "processed_photometry" / "calibration" / "bias" / "master_bias_40.fits"
 )
 master_bias = ccdp.CCDData.read(master_bias_path)
 master_bias = ccdp.trim_image(master_bias[TRIM:-TRIM, TRIM:-TRIM])
