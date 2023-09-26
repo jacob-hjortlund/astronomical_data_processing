@@ -211,7 +211,7 @@ rule random_bias_frames:
         "src/data/raw_photometry",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/random_bias_frames.pdf",
+        "src/tex/figures/random_bias_frames.pdf",
     script:
         "src/scripts/figures/random_bias_frames.py"
 
@@ -220,7 +220,7 @@ rule bias_frame_histograms:
         "src/data/raw_photometry",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/bias_frame_histograms.pdf",
+        "src/tex/figures/bias_frame_histograms.pdf",
     script:
         "src/scripts/figures/bias_frame_histograms.py"
 rule master_bias_frame:
@@ -228,7 +228,7 @@ rule master_bias_frame:
         "src/data/processed_photometry/calibration/bias",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/master_bias_frame.pdf",
+        "src/tex/figures/master_bias_frame.pdf",
     script:
         "src/scripts/figures/master_bias_frame.py"
 rule master_bias_stds:
@@ -236,7 +236,7 @@ rule master_bias_stds:
         "src/data/processed_photometry/calibration/bias",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/master_bias_stds.pdf",
+        "src/tex/figures/master_bias_stds.pdf",
     script:
         "src/scripts/figures/master_bias_stds.py"
 rule master_dark_frame:
@@ -244,7 +244,7 @@ rule master_dark_frame:
         "src/data/processed_photometry/calibration/darks",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/master_dark_frame.pdf",
+        "src/tex/figures/master_dark_frame.pdf",
     script:
         "src/scripts/figures/master_dark_frame.py"
 rule master_lampflat_frames:
@@ -252,7 +252,7 @@ rule master_lampflat_frames:
         "src/data/processed_photometry/calibration/flats",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/master_lampflat_frames.pdf",
+        "src/tex/figures/master_lampflat_frames.pdf",
     script:
         "src/scripts/figures/master_lampflat_frames.py"
 rule master_skyflat_frames:
@@ -260,7 +260,7 @@ rule master_skyflat_frames:
         "src/data/processed_photometry/calibration/flats",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/master_skyflat_frames.pdf",
+        "src/tex/figures/master_skyflat_frames.pdf",
     script:
         "src/scripts/figures/master_skyflat_frames.py"
 rule lampflat_calibrated_science_images:
@@ -268,7 +268,7 @@ rule lampflat_calibrated_science_images:
         "src/data/processed_photometry/science/observations",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/lampflat_calibrated_science_images.pdf",
+        "src/tex/figures/lampflat_calibrated_science_images.pdf",
     script:
         "src/scripts/figures/lampflat_calibrated_science_images.py"
 rule skyflat_calibrated_science_images:
@@ -276,7 +276,7 @@ rule skyflat_calibrated_science_images:
         "src/data/processed_photometry/science/observations",
         "src/scripts/figures/figure_utils.py"
     output:
-        "src/figures/skyflat_calibrated_science_images.pdf",
+        "src/tex/figures/skyflat_calibrated_science_images.pdf",
     script:
         "src/scripts/figures/skyflat_calibrated_science_images.py"
 
