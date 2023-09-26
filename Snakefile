@@ -153,7 +153,7 @@ rule download_raw_data:
     output:
         directory("src/data/raw_photometry"),
     cache:
-        True
+        False
     script:
         "src/scripts/intermediate_results/download_raw_data.py"
 

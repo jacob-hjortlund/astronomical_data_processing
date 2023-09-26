@@ -27,7 +27,6 @@ dag:
 datasets:
   10.5281/zenodo.8366343:
     contents:
-      
       CALIB.zip:
         CALIB:
           EFOSC.2000-12-28T22:11:19.687.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
@@ -172,7 +171,6 @@ datasets:
           EFOSC.2000-12-29T22:09:10.995.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
           EFOSC.2000-12-29T07:02:17.818.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
           EFOSC.2000-12-30T05:36:52.414.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
-
       SCIENCE.zip:
         SCIENCE:
           EFOSC.2000-12-30T07:58:50.968.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
