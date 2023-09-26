@@ -374,7 +374,7 @@ def create_master(
     master.meta["object"] = image_type
     master.meta["is_master"] = "True"
 
-    master_name = f"master_{image_type}"
+    master_name = f"master_{image_type.lower()}"
     if name_modifiers is not None:
         master_name += "_" + "_".join(name_modifiers)
     master_name += ".fits"

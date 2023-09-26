@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 DIM = 1030
 TRIM = 12
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
-save_path = paths.data / "processed_photometry" / "CALIB" / "bias"
+save_path = paths.data / "processed_photometry" / "calibration" / "bias"
 
 calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 

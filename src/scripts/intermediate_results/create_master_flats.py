@@ -11,10 +11,10 @@ DIM = 1030
 filter_name_column = "eso ins filt1 name"
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 master_bias_path = (
-    paths.data / "processed_photometry" / "CALIB" / "bias" / "master_BIAS_40.fits"
+    paths.data / "processed_photometry" / "calibration" / "bias" / "master_bias_40.fits"
 )
 # master_dark_path = (
-#     paths.data / "processed_photometry" / "CALIB" / "darks" / "master_DARK.fits"
+#     paths.data / "processed_photometry" / "calibration" / "darks" / "master_dark.fits"
 # )
 
 
@@ -41,7 +41,7 @@ for flat_type in ["SKY", "LAMP"]:
         filter_save_path = save_path = (
             paths.data
             / "processed_photometry"
-            / "CALIB"
+            / "calibration"
             / "flats"
             / flat_type.lower()
             / filter_name
