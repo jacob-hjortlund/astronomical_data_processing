@@ -385,11 +385,17 @@ dependencies:
     - src/data/processed_photometry/science/observations/
     - src/scripts/figures/figure_utils.py
 
+  src/scripts/figures/skyflat_calibrated_science_images.py:
+    - src/data/processed_photometry/science/observations/
+    - src/scripts/figures/figure_utils.py
+
   src/tex/ms.tex:
     - src/tex/figures/master_dark_frame.pdf
     - src/tex/figures/master_skyflat_frames.pdf
     - src/tex/figures/master_lampflat_frames.pdf
     - src/tex/figures/master_bias_frame.pdf
+    - src/tex/figures/skyflat_calibrated_science_images.pdf
+    - src/tex/figures/lampflat_calibrated_science_images.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
