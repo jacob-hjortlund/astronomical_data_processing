@@ -184,6 +184,8 @@ datasets:
 # Custom file dependencies
 dependencies:
 
+  # -------------------- PREPROCESSING -------------------- #
+
   src/scripts/intermediate_results/download_raw_data.py:
     - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
     - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
@@ -356,9 +358,16 @@ dependencies:
     - src/data/processed_photometry/CALIB/flats/
     - src/scripts/intermediate_results/processing_utils.py
 
+  # -------------------- FIGURES -------------------- #
+
   src/scripts/random_bias_frames.py:
     - src/data/raw_photometry/
     - src/scripts/figures/figure_utils.py
+  
+  src/scripts/bias_frame_histograms.py:
+    - src/data/raw_photometry/
+    - src/scripts/figures/figure_utils.py
+
 
   # src/scripts/process_standard_stars.py:
   #   - src/scripts/utils.py

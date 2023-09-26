@@ -214,8 +214,17 @@ rule random_bias_frames:
         "src/data/raw_photometry",
         "src/scripts/figures/figure_utils.py"
     output:
-        directory("src/figures/random_bias_frames.pdf"),
+        "src/figures/random_bias_frames.pdf",
     script:
         "src/scripts/figures/random_bias_frames.py"
+
+rule bias_frame_histograms:
+    input:
+        "src/data/raw_photometry",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        "src/figures/bias_frame_histograms.pdf",
+    script:
+        "src/scripts/figures/bias_frame_histograms.py"
 
 # ------------------------------- NUMBERS ------------------------------- #

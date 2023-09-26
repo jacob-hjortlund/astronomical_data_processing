@@ -1,14 +1,12 @@
 import paths
-import utils
 import numpy as np
 import ccdproc as ccdp
 import scipy.stats as stats
+import figure_utils as utils
 import matplotlib.pyplot as plt
 
 DIM = 1030
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
-save_path = paths.data / "processed_photometry" / "CALIB" / "bias"
-
 calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 
 bias_filter = {
