@@ -387,8 +387,8 @@ dependencies:
 
   src/tex/ms.tex:
     - src/tex/figures/master_dark_frame.pdf
-    - src/tex/figures/master_skyflat_frame.pdf
-    - src/tex/figures/master_lampflat_frame.pdf
+    - src/tex/figures/master_skyflat_frames.pdf
+    - src/tex/figures/master_lampflat_frames.pdf
     - src/tex/figures/master_bias_frame.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
