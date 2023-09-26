@@ -59,4 +59,4 @@ for i, (frame, frame_name) in enumerate(zip(frames, frame_names)):
     ax[i].set_ylabel("Density", fontsize=16)
 
 fig.tight_layout()
-fig.savefig(paths.figures / "bias_frame_distributions.pdf")
+fig.savefig(paths.figures / "bias_frame_histograms.pdf")
