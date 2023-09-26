@@ -209,6 +209,46 @@ def preprocess_flat(
     return calibrated_and_scaled_flats
 
 
+def reduce_image(
+    image,
+    master_bias,
+    master_flat,
+    master_dark=None,
+    x_trim: int = 10,
+    y_trim: int = 20,
+    exptime_key: str = "EXPTIME",
+    save: bool = False,
+    save_path: str = None,
+    image_name: str = None,
+):
+    bias_subtracted_image = ccdp.subtract_bias(image, master_bias)
+
+    if master_dark is not None:
+        dark_subtracted_image = ccdp.subtract_dark(
+            bias_subtracted_image,
+            master_dark,
+            dark_exposure=1.0 * u.second,
+            data_exposure=image.header[exptime_key] * u.second,
+            scale=True,
+        )
+    else:
+        dark_subtracted_image = bias_subtracted_image
+
+    reduced_image = ccdp.flat_correct(dark_subtracted_image, master_flat)
+
+    if x_trim is not None:
+        reduced_image = ccdp.trim_image(reduced_image[:, x_trim:-x_trim])
+    if y_trim is not None:
+        reduced_image = ccdp.trim_image(reduced_image[y_trim:-y_trim, :])
+
+    reduced_image.meta["reduced"] = "True"
+
+    if save:
+        reduced_image.write(save_path / image_name, overwrite=True)
+
+    return reduced_image
+
+
 def flat_ratio_mask(
     flat_1,
     flat_2,

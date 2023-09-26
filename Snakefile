@@ -204,6 +204,20 @@ rule process_science_images:
     script:
         "src/scripts/intermediate_results/process_science_images.py"
 
+rule process_standard_star_images:
+    input:
+        "src/data/raw_photometry",
+        "src/data/processed_photometry/calibration/bias",
+        "src/data/processed_photometry/calibration/darks",
+        "src/data/processed_photometry/calibration/flats",
+        "src/scripts/intermediate_results/processing_utils.py"
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/science/standard_stars"),
+    script:
+        "src/scripts/intermediate_results/process_standard_star_images.py"
+
 # ------------------------------- FIGURES ------------------------------- #
 
 rule random_bias_frames:
@@ -297,5 +311,26 @@ rule skyflat_calibrated_science_images:
         True
     script:
         "src/scripts/figures/skyflat_calibrated_science_images.py"
+
+rule lampflat_calibrated_standard_star_images:
+    input:
+        "src/data/processed_photometry/science/standard_stars",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        "src/tex/figures/lampflat_calibrated_standard_star_images.pdf",
+    cache:
+        True
+    script:
+        "src/scripts/figures/lampflat_calibrated_standard_star_images.py"
+rule skyflat_calibrated_standard_star_images:
+    input:
+        "src/data/processed_photometry/science/standard_stars",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        "src/tex/figures/skyflat_calibrated_standard_star_images.pdf",
+    cache:
+        True
+    script:
+        "src/scripts/figures/skyflat_calibrated_standard_star_images.py"
 
 # ------------------------------- NUMBERS ------------------------------- #
