@@ -1,8 +1,8 @@
 import paths
-import utils
 import numpy as np
 import ccdproc as ccdp
 import matplotlib.pyplot as plt
+import processing_utils as utils
 
 DIM = 1030
 TRIM = 12

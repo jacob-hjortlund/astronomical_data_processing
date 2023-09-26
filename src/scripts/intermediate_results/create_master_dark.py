@@ -1,9 +1,9 @@
 import os
 import paths
-import utils
 import numpy as np
 import ccdproc as ccdp
 import matplotlib.pyplot as plt
+import processing_utils as utils
 
 from astropy import units as u
 
