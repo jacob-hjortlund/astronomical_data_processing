@@ -353,16 +353,16 @@ dependencies:
 
   # -------------------- FIGURES -------------------- #
 
-  # src/scripts/figures/random_bias_frames.py:
-  #   - src/data/raw_photometry/
-  #   - src/scripts/figures/figure_utils.py
-  
-  # src/scripts/figures/bias_frame_histograms.py:
-  #   - src/data/raw_photometry/
-  #   - src/scripts/figures/figure_utils.py
-
-  src/tex/ms.tex:
+  src/scripts/figures/random_bias_frames.py:
     - src/data/raw_photometry/
+    - src/scripts/figures/figure_utils.py
+  
+  src/scripts/figures/bias_frame_histograms.py:
+    - src/data/raw_photometry/
+    - src/scripts/figures/figure_utils.py
+
+  # src/tex/ms.tex:
+  #   - src/data/raw_photometry/
   #   - src/tex/figures/master_dark.pdf
   #   - src/tex/figures/master_skyflat.pdf
   #   - src/data/processed_photometry/SCIENCE/
