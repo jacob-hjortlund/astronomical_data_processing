@@ -176,9 +176,7 @@ datasets:
           EFOSC.2000-12-30T07:58:50.968.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
           EFOSC.2000-12-30T08:00:22.811.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
           EFOSC.2000-12-30T07:59:36.806.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
-          EFOSC.2001-01-03T08:54:27.270.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:54:27.270.fits
-          EFOSC.2001-01-03T08:55:18.187.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:55:18.187.fits
-          EFOSC.2001-01-03T08:56:03.899.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:56:03.899.fits
+          
 # Custom file dependencies
 dependencies:
 
@@ -330,9 +328,6 @@ dependencies:
     - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
     - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
     - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:54:27.270.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:55:18.187.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:56:03.899.fits
 
   src/scripts/intermediate_results/create_master_biases.py:
     - src/data/raw_photometry/

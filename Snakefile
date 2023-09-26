@@ -147,9 +147,6 @@ rule download_raw_data:
         "src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits",
         "src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits",
         "src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits",
-        "src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:54:27.270.fits",
-        "src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:55:18.187.fits",
-        "src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:56:03.899.fits"
     output:
         directory("src/data/raw_photometry"),
     cache:
