@@ -2,6 +2,8 @@ import paths
 
 zenodo_path = paths.data / "zenodo_archive"
 raw_path = paths.data / "raw_photometry"
+print(zenodo_path)
+print(raw_path)
 
 for folder in zenodo_path.iterdir():
     if folder.is_dir():
