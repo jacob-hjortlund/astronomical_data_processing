@@ -381,10 +381,10 @@ dependencies:
   #   - src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:55:18.187.fits
   #   - src/data/zenodo_archive/SCIENCE/EFOSC.2001-01-03T08:56:03.899.fits
 
-  src/tex/ms.tex:
-    - src/tex/figures/master_dark.pdf
-    - src/tex/figures/master_skyflat.pdf
-    - src/data/processed_photometry/SCIENCE/
+  # src/tex/ms.tex:
+  #   - src/tex/figures/master_dark.pdf
+  #   - src/tex/figures/master_skyflat.pdf
+  #   - src/data/processed_photometry/SCIENCE/
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
