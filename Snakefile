@@ -168,7 +168,7 @@ rule create_master_biases:
 rule create_master_dark:
     input:
         "src/data/raw_photometry",
-        "src/data/process_photometry/calibration/bias",
+        "src/data/processed_photometry/calibration/bias",
         "src/scripts/intermediate_results/processing_utils.py"
     output:
         directory("src/data/processed_photometry/calibration/darks"),
@@ -180,8 +180,8 @@ rule create_master_dark:
 rule create_master_flats:
     input:
         "src/data/raw_photometry",
-        "src/data/process_photometry/calibration/bias",
-        "src/data/process_photometry/calibration/darks",
+        "src/data/processed_photometry/calibration/bias",
+        "src/data/processed_photometry/calibration/darks",
         "src/scripts/intermediate_results/processing_utils.py"
     output:
         directory("src/data/processed_photometry/calibration/flats"),
@@ -193,9 +193,9 @@ rule create_master_flats:
 rule process_science_images:
     input:
         "src/data/raw_photometry",
-        "src/data/process_photometry/calibration/bias",
-        "src/data/process_photometry/calibration/darks",
-        "src/data/process_photometry/calibration/flats",
+        "src/data/processed_photometry/calibration/bias",
+        "src/data/processed_photometry/calibration/darks",
+        "src/data/processed_photometry/calibration/flats",
         "src/scripts/intermediate_results/processing_utils.py"
     cache:
         True
