@@ -1,4 +1,5 @@
 import paths
+import colorcet as cc
 import ccdproc as ccdp
 import figure_utils as utils
 import matplotlib.pyplot as plt
@@ -6,12 +7,13 @@ import matplotlib.pyplot as plt
 base_path = paths.data / "processed_photometry" / "science" / "observations"
 
 filters = ["V", "R"]
+colormaps = [cc.cm.kg, cc.cm.kr]
 flat_type = "lamp"
 
 fig, ax = plt.subplots(
     ncols=2, nrows=2, figsize=(6 * 3, 6 * 3), sharex=True, sharey=True
 )
-for i, filter_name in enumerate(filters):
+for i, (filter_name, colormap) in enumerate(zip(filters, colormaps)):
     image_path = base_path / (filter_name + "_" + flat_type.lower() + "_image.fits")
     image = ccdp.CCDData.read(image_path)
     uncertainty = ccdp.CCDData(image.uncertainty.array, unit="adu")
@@ -21,12 +23,14 @@ for i, filter_name in enumerate(filters):
         ax=ax[i, 0],
         fig=fig,
         cbar_label=r"Signal [e$^-$]",
+        cmap=colormap,
     )
     utils.show_image(
         uncertainty,
         ax=ax[i, 1],
         fig=fig,
         cbar_label=r"Uncertainty [e$^-$]",
+        cmap=colormap,
     )
 
 ax[0, 0].set_title("Image", fontsize=24)
