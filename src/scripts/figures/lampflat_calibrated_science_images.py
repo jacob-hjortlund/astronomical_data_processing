@@ -1,11 +1,9 @@
-import os
 import paths
-import utils
 import ccdproc as ccdp
+import figure_utils as utils
 import matplotlib.pyplot as plt
-import astropy.units as u
 
-base_path = paths.data / "processed_photometry" / "SCIENCE"
+base_path = paths.data / "processed_photometry" / "science" / "observations"
 
 filters = ["V", "R"]
 flat_type = "lamp"
@@ -14,11 +12,7 @@ fig, ax = plt.subplots(
     ncols=2, nrows=2, figsize=(6 * 3, 6 * 3), sharex=True, sharey=True
 )
 for i, filter_name in enumerate(filters):
-    image_path = (
-        base_path
-        / filter_name
-        / ("processed_" + filter_name + "_" + flat_type.lower() + "_image.fits")
-    )
+    image_path = base_path / (filter_name + "_" + flat_type.lower() + "_image.fits")
     image = ccdp.CCDData.read(image_path)
     uncertainty = ccdp.CCDData(image.uncertainty.array, unit="adu")
 
@@ -44,6 +38,6 @@ ax[1, 1].set_xlabel("X [pixels]", fontsize=24)
 fig.suptitle("Lamp Flat Calibrated Science Images", fontsize=24)
 fig.tight_layout()
 fig.savefig(
-    paths.figures / "science_lamp_cal.pdf",
+    paths.figures / "lampflat_calibrated_science_images.pdf",
     bbox_inches="tight",
 )

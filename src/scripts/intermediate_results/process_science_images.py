@@ -35,7 +35,7 @@ for flat_type in ["SKY", "LAMP"]:
             flats_path
             / flat_type.lower()
             / filter_name
-            / ("master_" + flat_type + "FLAT.fits")
+            / ("master_" + flat_type.lower() + "flat.fits")
         )
         master_flat = ccdp.CCDData.read(master_flat_path)
         master_flat = ccdp.trim_image(master_flat[TRIM:-TRIM, TRIM:-TRIM])

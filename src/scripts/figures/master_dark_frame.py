@@ -1,11 +1,11 @@
-import os
 import paths
-import utils
-import numpy as np
 import ccdproc as ccdp
+import figure_utils as utils
 import matplotlib.pyplot as plt
 
-path = paths.data / "processed_photometry" / "CALIB" / "darks" / "master_DARK.fits"
+path = (
+    paths.data / "processed_photometry" / "calibration" / "darks" / "master_dark.fits"
+)
 master_dark = ccdp.CCDData.read(path)
 
 fig, ax = plt.subplots(figsize=(10, 10))
@@ -14,4 +14,4 @@ ax.set_title("Master Dark", fontsize=20)
 ax.set_xlabel("X [pixels]", fontsize=16)
 ax.set_ylabel("Y [pixels]", fontsize=16)
 fig.tight_layout()
-fig.savefig(paths.figures / "master_dark.pdf")
+fig.savefig(paths.figures / "master_dark_frame.pdf")

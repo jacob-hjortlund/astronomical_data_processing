@@ -1,7 +1,7 @@
 import paths
-import utils
 import numpy as np
 import ccdproc as ccdp
+import figure_utils as utils
 import matplotlib.pyplot as plt
 
 TRIM = 20
@@ -10,10 +10,10 @@ N_FRAMES = 40
 means = np.zeros(N_FRAMES)
 stds = np.zeros(N_FRAMES)
 
-base_path = paths.data / "processed_photometry" / "CALIB" / "bias"
+base_path = paths.data / "processed_photometry" / "calibration" / "bias"
 
 for i in range(N_FRAMES):
-    file_path = base_path / f"master_BIAS_{i+1}.fits"
+    file_path = base_path / f"master_bias_{i+1}.fits"
     master_bias = ccdp.CCDData.read(file_path)
     master_bias_data = master_bias.data.copy()[TRIM:-TRIM, TRIM:-TRIM]
     means[i] = np.mean(master_bias_data)
@@ -32,4 +32,4 @@ ax[1].set_xlabel("Number of Biases Frames", fontsize=16)
 ax[1].set_ylabel("Standard Deviation [ADU]", fontsize=16)
 ax[1].set_title("STD vs. Frames", fontsize=20)
 fig.tight_layout()
-fig.savefig(paths.figures / "bias_frame_stats.pdf")
+fig.savefig(paths.figures / "master_bias_stds.pdf")

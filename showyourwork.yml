@@ -361,6 +361,30 @@ dependencies:
     - src/data/raw_photometry/
     - src/scripts/figures/figure_utils.py
 
+  src/scripts/figures/master_bias_frame.py:
+    - src/data/processed_photometry/calibration/bias/
+    - src/scripts/figures/figure_utils.py
+
+  src/scripts/figures/master_bias_stds.py:
+    - src/data/processed_photometry/calibration/bias/
+    - src/scripts/figures/figure_utils.py
+
+  src/scripts/figures/master_dark_frame:
+    - src/data/processed_photometry/calibration/darks/
+    - src/scripts/figures/figure_utils.py
+  
+  src/scripts/figures/master_lampflat_frames.py:
+    - src/data/processed_photometry/calibration/flats/
+    - src/scripts/figures/figure_utils.py
+  
+  src/scripts/figures/master_skyflat_frames.py:
+    - src/data/processed_photometry/calibration/flats/
+    - src/scripts/figures/figure_utils.py
+  
+  src/scripts/figures/lampflat_calibrated_science_images.py:
+    - src/data/processed_photometry/science/observations/
+    - src/scripts/figures/figure_utils.py
+
   # src/tex/ms.tex:
   #   - src/data/raw_photometry/
   #   - src/tex/figures/master_dark.pdf
@@ -433,7 +457,7 @@ tectonic_args: []
 # (such as to switch `minted` from `finalizecache` to `frozencache`)
 # The script will be passed a directory containing the manuscript source
 # as input, and should modify the contents of that directory in-place.
-# preprocessed_arxiv_script: my_preprocessed_script.sh
+# processed_arxiv_script: my_processed_script.sh
 
 # Enable verbose output?
 verbose: true
