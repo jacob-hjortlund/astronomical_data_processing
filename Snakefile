@@ -223,7 +223,7 @@ rule bias_frames_means_stds:
     cache:
         True
     output:
-        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv"
+        directory("src/data/processed_photometry/calibration/bias")
     script:
         "src/scripts/intermediate_results/bias_frames_means_stds.py"
 
