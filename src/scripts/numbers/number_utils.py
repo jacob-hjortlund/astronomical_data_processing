@@ -116,4 +116,4 @@ def save_variable_to_latex(
     )
 
     with open(file_path, mode) as f:
-        f.write(f"{variable_name},{variable_str}")
+        f.write(f"{variable_name},{variable_str}\n")
