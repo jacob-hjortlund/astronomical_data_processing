@@ -1,10 +1,81 @@
 import os
+import paths
 import numpy as np
+import pandas as pd
 import ccdproc as ccdp
 import astropy.units as u
 
 from pathlib import Path
 from astropy.stats import mad_std
+
+
+def save_array_to_csv(
+    array: np.ndarray,
+    column_names: list = None,
+    index_names: list = None,
+    filename: str = None,
+    path: str = None,
+    overwrite: bool = False,
+) -> None:
+    """
+    Save an array to a CSV file. If the file already exists, then the array is appended to the
+    existing file.
+
+    Args:
+        array (np.ndarray): The array to save.
+        column_names (list, optional): Names of the columns in the array. Defaults to None.
+        index_names (list, optional): Names of the rows in the array. Defaults to None.
+        filename (str, optional): Name of the file to save to. Defaults to 'array.csv'.
+        path (str, optional): Path to save the file to. Defaults to paths.output.
+    """
+
+    if path is None:
+        path = paths.data / "processed_photometry"
+    path = Path(path)
+    path.mkdir(parents=True, exist_ok=True)
+    file_path = path / filename
+
+    # Ensure that array has 2 dimensions
+    if len(array.shape) == 1:
+        array = array.reshape(-1, 1)
+
+    if column_names is None:
+        column_names = [f"col_{i}" for i in range(array.shape[1])]
+    elif len(column_names) != array.shape[1]:
+        raise ValueError(
+            f"Number of column names ({len(column_names)}) must match number of columns ({array.shape[1]})"
+        )
+
+    if index_names is None:
+        index_names = [f"row_{i}" for i in range(array.shape[0])]
+    elif len(index_names) != array.shape[0]:
+        raise ValueError(
+            f"Number of index names ({len(index_names)}) must match number of rows ({array.shape[0]})"
+        )
+
+    df = pd.DataFrame(
+        data=array,
+        columns=column_names,
+        index=index_names,
+    )
+    if file_path.exists() and not overwrite:
+        current_df = pd.read_csv(file_path)
+        column_names = current_df.columns
+
+        if len(column_names) != array.shape[1]:
+            raise ValueError(
+                f"Number of columns in file ({len(column_names)}) must match number of columns ({array.shape[1]}) in array"
+            )
+
+        df.columns = column_names
+        df = pd.concat([current_df, df], axis=0)
+
+    index = False if index_names is None else True
+    print(df)
+    df.to_csv(
+        file_path,
+        index=index,
+    )  # index_label="index")
 
 
 def create_master(
