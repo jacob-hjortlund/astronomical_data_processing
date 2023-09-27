@@ -329,6 +329,10 @@ dependencies:
     - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
     - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
 
+  src/scripts/intermediate_results/bias_frames_means_stds.py:
+    - src/data/raw_photometry/
+    - src/scripts/intermediate_results/processing_utils.py
+
   src/scripts/intermediate_results/create_master_biases.py:
     - src/data/raw_photometry/
     - src/scripts/intermediate_results/processing_utils.py
@@ -357,6 +361,12 @@ dependencies:
     - src/data/processed_photometry/calibration/darks/
     - src/data/processed_photometry/calibration/flats/
     - src/scripts/intermediate_results/processing_utils.py
+
+  # -------------------- NUMBERS -------------------- #
+
+  src/scripts/numbers/ron_estimates.py:
+    - src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv
+    - src/scripts/numbers/number_utils.py
 
   # -------------------- FIGURES -------------------- #
 
@@ -405,6 +415,7 @@ dependencies:
     - src/scripts/figures/figure_utils.py
 
   src/tex/ms.tex:
+    - src/tex/outputs/ron_estimates.dat
     - src/tex/figures/master_dark_frame.pdf
     - src/tex/figures/master_skyflat_frames.pdf
     - src/tex/figures/master_lampflat_frames.pdf

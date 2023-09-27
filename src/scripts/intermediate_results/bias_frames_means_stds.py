@@ -45,7 +45,7 @@ utils.save_array_to_csv(
     array=output_array,
     column_names=["mean", "std"],
     index_names=frame_names,
-    filename="bias_stats.csv",
+    filename="bias_frames_means_stds.csv",
     path=output_path,
     overwrite=True,
 )

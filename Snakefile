@@ -217,6 +217,27 @@ rule process_standard_star_images:
         directory("src/data/processed_photometry/science/standard_stars"),
     script:
         "src/scripts/intermediate_results/process_standard_star_images.py"
+rule bias_frames_means_stds:
+    input:
+        "src/data/raw_photometry",
+    cache:
+        True
+    output:
+        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv",
+    script:
+        "src/scripts/intermediate_results/bias_frames_means_stds.py"
+
+# ------------------------------- NUMBERS ------------------------------- #
+
+rule ron_estimates.py:
+    input:
+        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv",
+    output:
+        "src/tex/output/ron_estimates.dat",
+    cache:
+        True
+    script:
+        "src/scripts/numbers/ron_estimates.py"
 
 # ------------------------------- FIGURES ------------------------------- #
 
