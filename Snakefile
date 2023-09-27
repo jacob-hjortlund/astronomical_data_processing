@@ -219,11 +219,11 @@ rule process_standard_star_images:
         "src/scripts/intermediate_results/process_standard_star_images.py"
 rule bias_frames_means_stds:
     input:
-        "src/data/raw_photometry",
+        "src/data/raw_photometry"
     cache:
         True
     output:
-        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv",
+        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv"
     script:
         "src/scripts/intermediate_results/bias_frames_means_stds.py"
 
@@ -231,9 +231,9 @@ rule bias_frames_means_stds:
 
 rule ron_estimates:
     input:
-        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv",
+        "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv"
     output:
-        "src/tex/output/ron_estimates.dat",
+        "src/tex/output/ron_estimates.dat"
     cache:
         True
     script:
