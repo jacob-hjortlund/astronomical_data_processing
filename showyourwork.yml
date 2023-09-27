@@ -365,7 +365,7 @@ dependencies:
   # -------------------- NUMBERS -------------------- #
 
   src/scripts/numbers/ron_estimates.py:
-    - src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv
+    - src/data/processed_photometry/numbers/bias/bias_frames_means_stds.csv
     - src/scripts/numbers/number_utils.py
 
   # -------------------- FIGURES -------------------- #

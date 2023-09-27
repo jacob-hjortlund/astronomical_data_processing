@@ -22,7 +22,7 @@ frame_diff = frame_1.subtract(frame_2)
 frames = [frame_1, frame_2, frame_diff]
 frame_names = ["frame_1", "frame_2", "diff"]
 output_array = np.zeros((len(frames), 2))
-output_path = paths.data / "processed_photometry" / "calibration" / "bias"
+output_path = paths.data / "processed_photometry" / "numbers" / "bias"
 
 for i, (frame, frame_name) in enumerate(zip(frames, frame_names)):
     frame_mean = frame.data.mean()

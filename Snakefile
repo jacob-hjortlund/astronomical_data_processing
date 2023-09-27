@@ -223,7 +223,7 @@ rule bias_frames_means_stds:
     cache:
         True
     output:
-        directory("src/data/processed_photometry/calibration/bias")
+        "src/data/processed_photometry/numbers/bias/bias_frames_means_stds.csv"
     script:
         "src/scripts/intermediate_results/bias_frames_means_stds.py"
 
@@ -231,7 +231,7 @@ rule bias_frames_means_stds:
 
 rule ron_estimates:
     input:
-        "src/data/processed_photometry/calibration/bias"
+        "src/data/processed_photometry/numbers/bias/bias_frames_means_stds.csv"
     output:
         "src/tex/output/ron_estimates.dat"
     cache:

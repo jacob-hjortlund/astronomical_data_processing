@@ -5,7 +5,11 @@ import number_utils as nu
 
 frame_names = ["frame_1", "frame_2", "diff"]
 stats_path = (
-    paths.data / "processed_photometry" / "calibration" / "bias" / "bias_stats.csv"
+    paths.data
+    / "processed_photometry"
+    / "numbers"
+    / "bias"
+    / "bias_frames_means_stds.csv"
 )
 stats_df = pd.read_csv(stats_path, index_col=0)
 
