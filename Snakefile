@@ -229,7 +229,7 @@ rule bias_frames_means_stds:
 
 # ------------------------------- NUMBERS ------------------------------- #
 
-rule ron_estimates.py:
+rule ron_estimates:
     input:
         "src/data/processed_photometry/calibration/bias/bias_frames_means_stds.csv",
     output:
