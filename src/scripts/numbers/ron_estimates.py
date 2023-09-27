@@ -18,7 +18,7 @@ for frame_name in frame_names:
     frame_std = stats_df.loc[frame_name, "std"]
     nu.save_variable_to_latex(
         variable=frame_std,
-        sigfigs=2,
+        sigfigs=3,
         variable_name=f"{frame_name}",
         filename="ron_estimates.dat",
         path=paths.output,
