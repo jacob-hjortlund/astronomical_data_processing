@@ -415,7 +415,7 @@ dependencies:
     - src/scripts/figures/figure_utils.py
 
   src/tex/ms.tex:
-    - src/tex/outputs/ron_estimates.dat
+    - src/tex/output/ron_estimates.dat
     - src/tex/figures/master_dark_frame.pdf
     - src/tex/figures/master_skyflat_frames.pdf
     - src/tex/figures/master_lampflat_frames.pdf
