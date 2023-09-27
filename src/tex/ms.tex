@@ -1,7 +1,11 @@
 % Define document class
 \documentclass{aastex631}
 \usepackage{showyourwork}
-
+\usepackage{datatool, filecontents}
+\DTLsetseparator{: }% Set the separator between the columns.
+\DTLloaddb[noheader, keys={thekey,thevalue}]{mydata}{output/ron_estimates.dat}
+% Loads mydata.dat with column headers 'thekey' and 'thevalue'
+\newcommand{\var}[1]{\DTLfetch{my_data}{thekey}{#1}{thevalue}}
 % Begin!
 \begin{document}
 
@@ -172,6 +176,7 @@ Pellentesque cursus luctus mauris \citep{Luger2021}.
         \label{fig:master_dark}
     \end{centering}
 \end{figure}
+
 
 \bibliography{bib}
 
