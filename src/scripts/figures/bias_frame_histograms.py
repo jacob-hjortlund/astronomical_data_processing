@@ -36,15 +36,15 @@ for i, (frame, frame_name) in enumerate(zip(frames, frame_names)):
     frame_data_clipped = frame.data[idx_clipped]
     frame_mean = frame_data_clipped.mean()
     frame_std = frame_data_clipped.std()
-    if i == 2:
-        frame_std /= np.sqrt(2)
+    #if i == 2:
+        #frame_std /= np.sqrt(2)
 
     x_range = np.linspace(*xlim, 1000)
     y = stats.norm.pdf(x_range, loc=frame_mean, scale=frame_std)
 
     ax[i].hist(
         frame_data_clipped.flatten(),
-        bins=50,
+        bins=40,
         density=True,
         color=utils.default_colors[i],
         range=xlim,
