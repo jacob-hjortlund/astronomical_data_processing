@@ -2,6 +2,7 @@ import paths
 import numpy as np
 import colorcet as cc
 import ccdproc as ccdp
+import scipy.stats as stats
 import figure_utils as utils
 import astropy.modeling as mod
 import matplotlib.pyplot as plt
@@ -92,8 +93,26 @@ for filter_name, colormap in zip(filter_names, colormaps):
             stddev=1,
         )
         gauss_fit = fitter(gauss_init, mirrored_radii, mirrored_counts)
+
+        cov = fitter.fit_info["param_cov"]
+        mean = gauss_fit.parameters
+        mvg = stats.multivariate_normal(mean, cov)
+        gauss_samples = mvg.rvs(1000)
+        gauss_counts = np.zeros((1000, len(MOD_RADII)))
+        for j, sample in enumerate(gauss_samples):
+            gauss_counts[j] = mod.models.Gaussian1D(*sample)(MOD_RADII)
+
+        gauss_median = np.median(gauss_counts, axis=0)
+        gauss_upper = np.percentile(gauss_counts, 84, axis=0)
+        gauss_lower = np.percentile(gauss_counts, 16, axis=0)
+
         std = gauss_fit.stddev.value
         gauss_fwhm = 2 * np.sqrt(2 * np.log(2)) * std
+        gauss_fwhm_unc = 2 * np.sqrt(2 * np.log(2)) * np.sqrt(np.diag(cov))[2]
+
+        gauss_fwhm_string = utils.convert_variable_to_latex(
+            gauss_fwhm, gauss_fwhm_unc, sigfigs=1
+        )
 
         # Fit 1D Moffat
         moffat_init = mod.models.Moffat1D(
@@ -103,9 +122,41 @@ for filter_name, colormap in zip(filter_names, colormaps):
             alpha=1,
         )
         moffat_fit = fitter(moffat_init, mirrored_radii, mirrored_counts)
+
+        cov = fitter.fit_info["param_cov"]
+        mean = moffat_fit.parameters
+        mvg = stats.multivariate_normal(mean, cov)
+        moffat_samples = mvg.rvs(1000)
+        moffat_counts = np.zeros((1000, len(MOD_RADII)))
+        for j, sample in enumerate(moffat_samples):
+            moffat_counts[j] = mod.models.Moffat1D(*sample)(MOD_RADII)
+
+        moffat_median = np.median(moffat_counts, axis=0)
+        moffat_upper = np.percentile(moffat_counts, 84, axis=0)
+        moffat_lower = np.percentile(moffat_counts, 16, axis=0)
+
         alpha = moffat_fit.alpha.value
         gamma = moffat_fit.gamma.value
+
         moffat_fwhm = 2 * alpha * np.sqrt(2 ** (1 / gamma) - 1)
+        moffat_alpha_variance_term = (
+            np.diag(cov)[3] * (2 * np.sqrt(2 ** (1 / gamma) - 1)) ** 2
+        )
+        moffat_gamma_variance_term = (
+            np.diag(cov)[2]
+            * (
+                (alpha * np.log(2) * 2 ** (1 / gamma))
+                / (np.sqrt(2 ** (1 / gamma) - 1) * gamma**2)
+            )
+            ** 2
+        )
+        moffat_fwhm_unc = np.sqrt(
+            moffat_alpha_variance_term + moffat_gamma_variance_term
+        )
+
+        moffat_fwhm_string = utils.convert_variable_to_latex(
+            moffat_fwhm, moffat_fwhm_unc, sigfigs=1
+        )
 
         ax[1, i].errorbar(
             profile_radii,
@@ -119,15 +170,29 @@ for filter_name, colormap in zip(filter_names, colormaps):
             MOD_RADII,
             gauss_fit(MOD_RADII),
             color=utils.default_colors[0],
-            label=f"Gauss, FWHM = {gauss_fwhm:.2f}",
+            label=r"Gauss, FWHM = " + gauss_fwhm_string,
             lw=2,
+        )
+        ax[1, i].fill_between(
+            MOD_RADII,
+            gauss_lower,
+            gauss_upper,
+            color=utils.default_colors[0],
+            alpha=0.3,
         )
         ax[1, i].plot(
             MOD_RADII,
             moffat_fit(MOD_RADII),
             color=utils.default_colors[1],
-            label=f"Moffat, FWHM = {moffat_fwhm:.2f}",
+            label=r"Moffat, FWHM = " + moffat_fwhm_string,
             lw=2,
+        )
+        ax[1, i].fill_between(
+            MOD_RADII,
+            moffat_lower,
+            moffat_upper,
+            color=utils.default_colors[1],
+            alpha=0.3,
         )
 
         ax[0, i].set_title(f"Star {i+1}", fontsize=14)
@@ -138,7 +203,7 @@ for filter_name, colormap in zip(filter_names, colormaps):
             ax[0, i].set_ylabel("Y [pixels]", fontsize=14)
             ax[1, i].set_ylabel("Electron Counts", fontsize=14)
 
-        ax[1, i].legend(loc="upper right", fontsize=12)
+        ax[1, i].legend(loc="upper right", fontsize=10)
 
         ax[1, i].set_xlabel("Radius [Pixels]", fontsize=14)
 

@@ -283,3 +283,75 @@ def display_cosmic_rays(cosmic_rays, images, titles=None, only_display_rays=None
     # This choice results in the images close to each other but with
     # a small gap.
     plt.subplots_adjust(wspace=0.1, hspace=0.05)
+
+
+import paths
+import numpy as np
+import pandas as pd
+import uncertainties as unc
+
+from pathlib import Path
+
+
+def convert_variable_to_latex(
+    variable: float,
+    error: float = None,
+    sigfigs: int = None,
+    decimals: int = None,
+    units: str = None,
+) -> str:
+    """
+    Round a variable with potential uncertainty to either sigfigs significant figures or
+    decimals decimal places and return it as a LaTeX-formatted string.
+
+    Args:
+        variable (float): The variable to round.
+        error (float, optional): The error on the variable. Defaults to None.
+        sigfigs (int, optional): Number of significant figures to round to. Defaults to None.
+                                    If None, then decimals must be provided.
+        decimals (int, optional): Number of decimal places to round to. Defaults to None.
+                                    If None, then sigfigs must be provided.
+        units (str, optional): Units of the variable. Defaults to None.
+
+    Returns:
+        str: The rounded variable as a LaTeX-formatted string.
+    """
+
+    if sigfigs is None and decimals is None:
+        raise ValueError("Must provide either sigfigs or decimals")
+    if sigfigs is not None and decimals is not None:
+        raise ValueError("Cannot provide both sigfigs and decimals")
+    if decimals is not None and error is not None:
+        raise ValueError("Cannot provide both decimals and error")
+
+    if decimals is not None:
+        n_digits = len(str(variable).split(".")[0])
+        sigfigs = decimals + n_digits
+        _error = variable
+    elif error is None:
+        _error = variable
+    else:
+        _error = error
+
+    variable = unc.ufloat(variable, _error)
+    rounded_variable = variable.__format__(f".{sigfigs}uL")
+
+    if error is None or decimals is not None:
+        rounded_variable_list = rounded_variable.split(" ")
+        if "10^" in rounded_variable:
+            rounded_variable = (
+                rounded_variable_list[0]
+                + rounded_variable_list[-2]
+                + rounded_variable_list[-1]
+            )
+            rounded_variable = rounded_variable.replace("\\left(", "")
+            rounded_variable = rounded_variable.replace("\\right)", "")
+        else:
+            rounded_variable = rounded_variable_list[0]
+
+    if units is not None:
+        rounded_variable = rounded_variable + " " + units
+
+    rounded_variable = r"$" + rounded_variable + "$"
+
+    return rounded_variable
