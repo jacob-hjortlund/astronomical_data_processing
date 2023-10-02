@@ -64,8 +64,12 @@ for filter_name in filter_names:
             stddev=1,
         )
         gauss_fit = fitter(gauss_init, mirrored_radii, mirrored_counts)
+        cov = fitter.fit_info["param_cov"]
+
         std = gauss_fit.stddev.value
+        std_unc = np.sqrt(np.diag(cov))[2]
         gauss_fwhm = 2 * np.sqrt(2 * np.log(2)) * std
+        gauss_fwhm_unc = 2 * np.sqrt(2 * np.log(2)) * std_unc
 
         # Fit 1D Moffat
         moffat_init = mod.models.Moffat1D(
@@ -75,17 +79,41 @@ for filter_name in filter_names:
             alpha=1,
         )
         moffat_fit = fitter(moffat_init, mirrored_radii, mirrored_counts)
+        cov = fitter.fit_info["param_cov"]
         alpha = moffat_fit.alpha.value
         gamma = moffat_fit.gamma.value
+        gamma_unc = np.sqrt(np.diag(cov))[2]
+        alpha_unc = np.sqrt(np.diag(cov))[3]
         moffat_fwhm = 2 * alpha * np.sqrt(2 ** (1 / gamma) - 1)
+        moffat_alpha_variance_term = (
+            alpha_unc**2 * (2 * np.sqrt(2 ** (1 / gamma) - 1)) ** 2
+        )
+        moffat_gamma_variance_term = (
+            gamma_unc**2
+            * (
+                (alpha * np.log(2) * 2 ** (1 / gamma))
+                / (np.sqrt(2 ** (1 / gamma) - 1) * gamma**2)
+            )
+            ** 2
+        )
+        moffat_fwhm_unc = np.sqrt(
+            moffat_alpha_variance_term + moffat_gamma_variance_term
+        )
 
         values_arr = np.array(
             [
-                [std, np.nan, gauss_fwhm],
-                [alpha, gamma, moffat_fwhm],
+                [
+                    std,
+                    std_unc,
+                    np.nan,
+                    np.nan,
+                    gauss_fwhm,
+                    gauss_fwhm_unc,
+                ],
+                [alpha, alpha_unc, gamma, gamma_unc, moffat_fwhm, moffat_fwhm_unc],
             ]
         )
-        col_names = ["par_1", "par_2", "FWHM"]
+        col_names = ["par_1", "par_1_err", "par_2", "par_2_err", "FWHM", "FWHM_err"]
         row_names = ["Gaussian", "Moffat"]
 
         utils.save_array_to_csv(
