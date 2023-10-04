@@ -16,11 +16,11 @@ MOD_RADII = np.linspace(0, MAX_RADII, 1000)
 base_path = paths.data / "processed_photometry" / "science" / "standard_stars"
 
 init_centroids = (
-    (285, 236),  # Standard Star 1
-    (331, 335),  # Standard Star 2
-    (817, 530),  # Standard Star 3
+    (817, 531),
+    (286, 237),
+    (313, 667),
 )
-
+star_names = ["0", "B", "C"]
 flat_type = "sky"
 filter_names = ["B", "V", "R"]
 
@@ -120,7 +120,7 @@ for filter_name in filter_names:
             array=values_arr,
             column_names=col_names,
             index_names=row_names,
-            filename=f"standard_star_{filter_name}_{i+1}_fwhm.csv",
+            filename=f"PG_323_086_{star_names[i]}_{filter_name}_fwhm.csv",
             path=output_path,
             overwrite=True,
         )
