@@ -17,10 +17,14 @@ MOD_RADII = np.linspace(0, MAX_RADII, 1000)
 base_path = paths.data / "processed_photometry" / "science" / "standard_stars"
 
 init_centroids = (
-    (285, 236),  # Standard Star 1
-    (331, 335),  # Standard Star 2
-    (817, 530),  # Standard Star 3
+    (817, 531),
+    (286, 237),
+    (313, 667),
+    # (285, 236),  # Standard Star 1
+    # (331, 335),  # Standard Star 2
+    # (817, 530),  # Standard Star 3
 )
+star_names = ["0", "B", "C"]
 
 flat_type = "sky"
 filter_names = ["B", "V", "R"]
@@ -195,7 +199,7 @@ for filter_name, colormap in zip(filter_names, colormaps):
             alpha=0.3,
         )
 
-        ax[0, i].set_title(f"Star {i+1}", fontsize=14)
+        ax[0, i].set_title(f"PG 1323-086-{star_names[i]}", fontsize=14)
         ax[0, i].set_xlim(xmin, xmax)
         ax[0, i].set_ylim(ymin, ymax)
         ax[0, i].set_xlabel("X [pixels]", fontsize=14)
