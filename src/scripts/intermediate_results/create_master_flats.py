@@ -7,29 +7,14 @@ import processing_utils as utils
 
 from astropy import units as u
 
-DIM = 1030
 filter_name_column = "eso ins filt1 name"
 raw_calib_path = paths.data / "raw_photometry" / "CALIB"
 master_bias_path = (
     paths.data / "processed_photometry" / "calibration" / "bias" / "master_bias_40.fits"
 )
-# master_dark_path = (
-#     paths.data / "processed_photometry" / "calibration" / "darks" / "master_dark.fits"
-# )
-
-
-# calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 master_bias = ccdp.CCDData.read(master_bias_path)
-# master_dark = ccdp.CCDData.read(master_dark_path)
 
 for flat_type in ["SKY", "LAMP"]:
-    # flat_filter = {
-    #     "object": flat_type + "FLAT",
-    #     "naxis1": DIM,
-    #     "naxis2": DIM,
-    # }
-
-    # flat_collection = calib_collection.filter(**flat_filter)
     raw_flat_path = raw_calib_path / (flat_type + "FLAT")
     flat_collection = ccdp.ImageFileCollection(location=raw_flat_path)
     filter_names = {
