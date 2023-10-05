@@ -1,4 +1,4 @@
-# ------------------------------- PREPROCESSING ------------------------------- #
+# ------------------------------- INTERMEDIATE RESULTS ------------------------------- #
 
 rule download_raw_data:
     input:
@@ -217,6 +217,15 @@ rule process_standard_star_images:
         directory("src/data/processed_photometry/science/standard_stars"),
     script:
         "src/scripts/intermediate_results/process_standard_star_images.py"
+rule correct_astrometry:
+    input:
+        "src/data/processed_photometry/science/standard_stars",
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/science/standard_stars"),
+    script:
+        "src/scripts/intermediate_results/correct_astrometry.py"
 rule bias_frames_means_stds:
     input:
         "src/data/raw_photometry"
@@ -354,5 +363,15 @@ rule skyflat_calibrated_standard_star_images:
         True
     script:
         "src/scripts/figures/skyflat_calibrated_standard_star_images.py"
+rule standard_star_positions:
+    input:
+        "src/data/processed_photometry/science/standard_stars",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        "src/tex/figures/standard_star_positions.pdf",
+    cache:
+        True
+    script:
+        "src/scripts/figures/standard_star_positions.py"
 
 # ------------------------------- NUMBERS ------------------------------- #

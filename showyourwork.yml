@@ -180,7 +180,7 @@ datasets:
 # Custom file dependencies
 dependencies:
 
-  # -------------------- PREPROCESSING -------------------- #
+  # -------------------- INTERMEDIATE RESULTS -------------------- #
 
   src/scripts/intermediate_results/download_raw_data.py:
     - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
@@ -348,19 +348,22 @@ dependencies:
     - src/data/processed_photometry/calibration/darks/
     - src/scripts/intermediate_results/processing_utils.py
 
-  src/scripts/process_science_images.py:
+  src/scripts/intermediate_results/process_science_images.py:
     - src/data/raw_photometry/
     - src/data/processed_photometry/calibration/bias/
     - src/data/processed_photometry/calibration/darks/
     - src/data/processed_photometry/calibration/flats/
     - src/scripts/intermediate_results/processing_utils.py
   
-  src/scripts/process_standard_star_images.py:
+  src/scripts/intermediate_results/process_standard_star_images.py:
     - src/data/raw_photometry/
     - src/data/processed_photometry/calibration/bias/
     - src/data/processed_photometry/calibration/darks/
     - src/data/processed_photometry/calibration/flats/
     - src/scripts/intermediate_results/processing_utils.py
+
+  src/scripts/intermediate_results/correct_astrometry.py:
+    - src/data/processed_photometry/science/standard_stars/
 
   # -------------------- NUMBERS -------------------- #
 
@@ -414,6 +417,9 @@ dependencies:
     - src/data/processed_photometry/science/standard_stars/
     - src/scripts/figures/figure_utils.py
 
+  src/scripts/figures/standard_star_positions.py:
+    - src/data/processed_photometry/science/standard_stars/
+
   src/tex/ms.tex:
     #- src/tex/output/ron_estimates.dat
     - src/tex/figures/master_dark_frame.pdf
@@ -424,6 +430,7 @@ dependencies:
     - src/tex/figures/lampflat_calibrated_science_images.pdf
     - src/tex/figures/skyflat_calibrated_standard_star_images.pdf
     - src/tex/figures/lampflat_calibrated_standard_star_images.pdf
+    - src/tex/figures/standard_star_positions.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
