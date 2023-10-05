@@ -117,3 +117,26 @@ def save_variable_to_latex(
 
     with open(file_path, mode) as f:
         f.write(f"{variable_name},{variable_str}\n")
+
+
+def weighted_average(
+    values: np.ndarray, errors: np.ndarray, axis: int = 0
+) -> np.ndarray:
+    """
+    Calculate the weighted average of a set of values along a given axis.
+
+    Args:
+        values (np.ndarray): Array of values to average.
+        errors (np.ndarray): Array of errors on the values.
+        axis (int, optional): Axis along which to average. Defaults to 0.
+
+    Returns:
+        np.ndarray: Weighted average of the values.
+        np.ndarray: Error on the weighted average.
+    """
+
+    weights = 1 / (errors**2)
+    weighted_average = np.sum(values * weights, axis=axis) / np.sum(weights, axis=axis)
+    weighted_error = np.sqrt(1 / np.sum(weights, axis=axis))
+
+    return weighted_average, weighted_error
