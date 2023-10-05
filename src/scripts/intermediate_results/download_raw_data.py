@@ -33,13 +33,13 @@ for folder in zenodo_path.iterdir():
                 object_folder.mkdir(parents=True, exist_ok=True)
 
                 for file in files:
-                    Path(file).rename(object_folder / file.name)
+                    Path(file).rename(object_folder / file)
 
             for standard_star in standard_star_filenames:
                 object_folder = new_folder_path / "STANDARD_STARS"
                 object_folder.mkdir(parents=True, exist_ok=True)
                 standard_star_path = folder / standard_star
-                standard_star_path.rename(object_folder / standard_star_path.name)
+                standard_star_path.rename(object_folder / standard_star)
 
         else:
             for file in folder.iterdir():
