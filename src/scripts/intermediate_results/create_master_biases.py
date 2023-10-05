@@ -4,20 +4,11 @@ import ccdproc as ccdp
 import matplotlib.pyplot as plt
 import processing_utils as utils
 
-DIM = 1030
 TRIM = 12
-raw_calib_path = paths.data / "raw_photometry" / "CALIB"
+raw_bias_path = paths.data / "raw_photometry" / "CALIB" / "BIAS"
 save_path = paths.data / "processed_photometry" / "calibration" / "bias"
 
-calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
-
-bias_filter = {
-    "object": "BIAS",
-    "naxis1": DIM,
-    "naxis2": DIM,
-}
-
-bias_collection = calib_collection.filter(**bias_filter)
+bias_collection = ccdp.ImageFileCollection(location=raw_bias_path)
 biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 
 n_frames = len(biases)

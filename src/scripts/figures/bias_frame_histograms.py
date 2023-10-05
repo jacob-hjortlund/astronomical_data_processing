@@ -6,16 +6,9 @@ import figure_utils as utils
 import matplotlib.pyplot as plt
 
 DIM = 1030
-raw_calib_path = paths.data / "raw_photometry" / "CALIB"
-calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
+raw_bias_path = paths.data / "raw_photometry" / "CALIB" / "BIAS"
+bias_collection = ccdp.ImageFileCollection(location=raw_bias_path)
 
-bias_filter = {
-    "object": "BIAS",
-    "naxis1": DIM,
-    "naxis2": DIM,
-}
-
-bias_collection = calib_collection.filter(**bias_filter)
 biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 
 frame_1 = biases[0]

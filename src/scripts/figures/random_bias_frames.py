@@ -5,7 +5,7 @@ import figure_utils as utils
 import matplotlib.pyplot as plt
 
 DIM = 1030
-raw_calib_path = paths.data / "raw_photometry" / "CALIB"
+raw_bias_path = paths.data / "raw_photometry" / "CALIB" / "BIAS"
 files = [
     "EFOSC.2000-12-30T05:17:49.057.fits",
     "EFOSC.2000-12-29T04:39:50.783.fits",
@@ -13,15 +13,8 @@ files = [
     "EFOSC.2000-12-30T04:19:55.000.fits",
 ]
 
-calib_collection = ccdp.ImageFileCollection(location=raw_calib_path, filenames=files)
+bias_collection = ccdp.ImageFileCollection(location=raw_bias_path, filenames=files)
 
-bias_filter = {
-    "object": "BIAS",
-    "naxis1": DIM,
-    "naxis2": DIM,
-}
-
-bias_collection = calib_collection.filter(**bias_filter)
 biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 
 fig, ax = plt.subplots(2, 2, figsize=(10, 10))
