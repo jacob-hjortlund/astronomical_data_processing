@@ -18,14 +18,14 @@ master_bias_path = (
 master_bias = ccdp.CCDData.read(master_bias_path)
 master_bias = ccdp.trim_image(master_bias[TRIM:-TRIM, TRIM:-TRIM])
 
-standard_star_file_names = [
-    "EFOSC.2001-01-03T08:54:27.270.fits",
-    "EFOSC.2001-01-03T08:55:18.187.fits",
-    "EFOSC.2001-01-03T08:56:03.899.fits",
-]
-calibration_path = paths.data / "raw_photometry" / "CALIB"
+# standard_star_file_names = [
+#     "EFOSC.2001-01-03T08:54:27.270.fits",
+#     "EFOSC.2001-01-03T08:55:18.187.fits",
+#     "EFOSC.2001-01-03T08:56:03.899.fits",
+# ]
+calibration_path = paths.data / "raw_photometry" / "CALIB" / "STANDARD_STARS"
 image_collection = ccdp.ImageFileCollection(
-    location=calibration_path, filenames=standard_star_file_names
+    location=calibration_path,  # filenames=standard_star_file_names
 )
 
 filter_names = {

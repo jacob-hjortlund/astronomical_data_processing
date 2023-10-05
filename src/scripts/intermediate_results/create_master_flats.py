@@ -18,18 +18,20 @@ master_bias_path = (
 # )
 
 
-calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
+# calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
 master_bias = ccdp.CCDData.read(master_bias_path)
 # master_dark = ccdp.CCDData.read(master_dark_path)
 
 for flat_type in ["SKY", "LAMP"]:
-    flat_filter = {
-        "object": flat_type + "FLAT",
-        "naxis1": DIM,
-        "naxis2": DIM,
-    }
+    # flat_filter = {
+    #     "object": flat_type + "FLAT",
+    #     "naxis1": DIM,
+    #     "naxis2": DIM,
+    # }
 
-    flat_collection = calib_collection.filter(**flat_filter)
+    # flat_collection = calib_collection.filter(**flat_filter)
+    raw_flat_path = raw_calib_path / (flat_type + "FLAT")
+    flat_collection = ccdp.ImageFileCollection(location=raw_flat_path)
     filter_names = {
         filter_name[0]: filter_name
         for filter_name in flat_collection.summary.to_pandas()[

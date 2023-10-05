@@ -6,16 +6,16 @@ import figure_utils as utils
 import matplotlib.pyplot as plt
 
 DIM = 1030
-raw_calib_path = paths.data / "raw_photometry" / "CALIB"
-calib_collection = ccdp.ImageFileCollection(location=raw_calib_path)
+raw_bias_path = paths.data / "raw_photometry" / "CALIB" / "BIAS"
+bias_collection = ccdp.ImageFileCollection(location=raw_bias_path)
 
-bias_filter = {
-    "object": "BIAS",
-    "naxis1": DIM,
-    "naxis2": DIM,
-}
+# bias_filter = {
+#     "object": "BIAS",
+#     "naxis1": DIM,
+#     "naxis2": DIM,
+# }
 
-bias_collection = calib_collection.filter(**bias_filter)
+# bias_collection = calib_collection.filter(**bias_filter)
 biases = list(bias_collection.ccds(ccd_kwargs={"unit": "adu"}))
 
 frame_1 = biases[0]
@@ -36,8 +36,8 @@ for i, (frame, frame_name) in enumerate(zip(frames, frame_names)):
     frame_data_clipped = frame.data[idx_clipped]
     frame_mean = frame_data_clipped.mean()
     frame_std = frame_data_clipped.std()
-    #if i == 2:
-        #frame_std /= np.sqrt(2)
+    # if i == 2:
+    # frame_std /= np.sqrt(2)
 
     x_range = np.linspace(*xlim, 1000)
     y = stats.norm.pdf(x_range, loc=frame_mean, scale=frame_std)
