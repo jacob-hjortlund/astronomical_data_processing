@@ -19,7 +19,7 @@ for folder in zenodo_path.iterdir():
         new_folder_path = raw_path / folder.name
         new_folder_path.mkdir(parents=True, exist_ok=True)
 
-        if folder.name is "CALIB":
+        if folder.name == "CALIB":
             collection = ccdp.ImageFileCollection(folder)
             object_files = [
                 collection.files_filtered(
