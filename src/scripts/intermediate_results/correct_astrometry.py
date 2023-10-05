@@ -15,11 +15,12 @@ upload_kwargs = {
 }
 
 fits_directory = (
-    paths.data / "processed_photometry" / "science" / "standard_stars"
+    paths.data / "processed_photometry" / "science" / "standard_stars" / "uncorrected"
 )  # Path to directory containing fits files to correct
 save_directory = (
-    paths.data / "processed_photometry" / "science" / "standard_stars"
+    paths.data / "processed_photometry" / "science" / "standard_stars" / "corrected"
 )  # Path to directory to save corrected fits files
+save_directory.mkdir(parents=True, exist_ok=True)
 
 client = utils.AstrometryClient()
 client.login(ASTROMETRY_API_KEY)

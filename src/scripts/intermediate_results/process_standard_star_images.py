@@ -42,7 +42,11 @@ for flat_type in ["SKY", "LAMP"]:
         master_flat = ccdp.trim_image(master_flat[TRIM:-TRIM, TRIM:-TRIM])
 
         filter_save_path = save_path = (
-            paths.data / "processed_photometry" / "science" / "standard_stars"
+            paths.data
+            / "processed_photometry"
+            / "science"
+            / "standard_stars"
+            / "uncorrected"
         )
         os.makedirs(filter_save_path, exist_ok=True)
 

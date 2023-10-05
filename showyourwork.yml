@@ -363,7 +363,7 @@ dependencies:
     - src/scripts/intermediate_results/processing_utils.py
 
   src/scripts/intermediate_results/correct_astrometry.py:
-    - src/data/processed_photometry/science/standard_stars/
+    - src/data/processed_photometry/science/standard_stars/uncorrected/
 
   # -------------------- NUMBERS -------------------- #
 
@@ -410,15 +410,15 @@ dependencies:
     - src/scripts/figures/figure_utils.py
 
   src/scripts/figures/lampflat_calibrated_standard_star_images.py:
-    - src/data/processed_photometry/science/standard_stars/
+    - src/data/processed_photometry/science/standard_stars/corrected/
     - src/scripts/figures/figure_utils.py
 
   src/scripts/figures/skyflat_calibrated_standard_star_images.py:
-    - src/data/processed_photometry/science/standard_stars/
+    - src/data/processed_photometry/science/standard_stars/corrected/
     - src/scripts/figures/figure_utils.py
 
   src/scripts/figures/standard_star_positions.py:
-    - src/data/processed_photometry/science/standard_stars/
+    - src/data/processed_photometry/science/standard_stars/corrected/
 
   src/tex/ms.tex:
     #- src/tex/output/ron_estimates.dat

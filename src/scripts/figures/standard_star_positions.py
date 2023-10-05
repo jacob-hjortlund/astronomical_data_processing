@@ -56,6 +56,7 @@ image_path = (
     / "processed_photometry"
     / "science"
     / "standard_stars"
+    / "corrected"
     / "B_sky_image.fits"
 )
 image = ccdp.CCDData.read(image_path, relax=True, fix=True)

@@ -3,7 +3,9 @@ import ccdproc as ccdp
 import figure_utils as utils
 import matplotlib.pyplot as plt
 
-base_path = paths.data / "processed_photometry" / "science" / "standard_stars"
+base_path = (
+    paths.data / "processed_photometry" / "science" / "standard_stars" / "corrected"
+)
 
 filters = ["B", "V", "R"]
 flat_type = "sky"
