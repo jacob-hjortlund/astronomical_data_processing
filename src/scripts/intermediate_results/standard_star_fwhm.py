@@ -120,7 +120,7 @@ for filter_name in filter_names:
             array=values_arr,
             column_names=col_names,
             index_names=row_names,
-            filename=f"PG_323_086_{star_names[i]}_{filter_name}_fwhm.csv",
+            filename=f"{star_names[i]}_{filter_name}_fwhm.csv",
             path=output_path,
             overwrite=True,
         )

@@ -235,6 +235,16 @@ rule bias_frames_means_stds:
         "src/data/processed_photometry/numbers/bias/bias_frames_means_stds.csv"
     script:
         "src/scripts/intermediate_results/bias_frames_means_stds.py"
+rule standard_star_fwhm:
+    input:
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/scripts/intermediate_results/processing_utils.py"
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/numbers/standard_star_fwhm")
+    script:
+        "src/scripts/intermediate_results/standard_star_fwhm.py"
 
 # ------------------------------- NUMBERS ------------------------------- #
 
