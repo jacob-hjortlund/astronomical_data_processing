@@ -13,7 +13,7 @@ MAX_RADII = 15
 EDGE_RADII = np.arange(MAX_RADII)
 MOD_RADII = np.linspace(0, MAX_RADII, 1000)
 
-base_path = paths.data / "processed_photometry" / "science" / "standard_stars"
+base_path = paths.data / "processed_photometry" / "science" / "standard_stars" / "fits"
 
 init_centroids = (
     (817, 531),
