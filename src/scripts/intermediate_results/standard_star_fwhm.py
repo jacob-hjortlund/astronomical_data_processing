@@ -24,7 +24,7 @@ star_names = ["0", "B", "C"]
 flat_type = "sky"
 filter_names = ["B", "V", "R"]
 
-output_path = paths.data / "processed_photometry" / "numbers" / "standard_stars_fwhm"
+output_path = paths.data / "processed_photometry" / "numbers" / "standard_star_fwhm"
 
 for filter_name in filter_names:
     image_path = base_path / (filter_name + "_" + flat_type.lower() + "_image.fits")
