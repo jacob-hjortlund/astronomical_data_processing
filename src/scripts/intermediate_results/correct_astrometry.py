@@ -15,10 +15,10 @@ upload_kwargs = {
 }
 
 fits_directory = (
-    paths.data / "processed_photometry" / "science" / "standard_stars" / "uncorrected"
+    paths.data / "processed_photometry" / "science" / "standard_stars" / "fits"
 )  # Path to directory containing fits files to correct
 save_directory = (
-    paths.data / "processed_photometry" / "science" / "standard_stars" / "corrected"
+    paths.data / "processed_photometry" / "science" / "standard_stars" / "wcs"
 )  # Path to directory to save corrected fits files
 save_directory.mkdir(parents=True, exist_ok=True)
 

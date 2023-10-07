@@ -551,9 +551,9 @@ class AstrometryClient:
             return result
         return result.get("status")
 
-    def get_output_fits_file(self, job_id):
-        fits_url = self.get_url(f"/new_fits_file/{job_id}/")
-        print(f"FITS URL: {fits_url}")
+    def get_output_wcs_fits(self, job_id):
+        fits_url = self.get_url(f"/wcs_file/{job_id}/")
+        print(f"WCS FITS URL: {fits_url}")
         file = urlopen(fits_url)
 
         return file
