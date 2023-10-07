@@ -214,16 +214,16 @@ rule process_standard_star_images:
     cache:
         True
     output:
-        directory("src/data/processed_photometry/science/standard_stars/uncorrected"),
+        directory("src/data/processed_photometry/science/standard_stars/fits"),
     script:
         "src/scripts/intermediate_results/process_standard_star_images.py"
 rule correct_astrometry:
     input:
-        "src/data/processed_photometry/science/standard_stars/uncorrected",
+        "src/data/processed_photometry/science/standard_stars/fits",
     cache:
         True
     output:
-        directory("src/data/processed_photometry/science/standard_stars/corrected"),
+        directory("src/data/processed_photometry/science/standard_stars/wcs"),
     script:
         "src/scripts/intermediate_results/correct_astrometry.py"
 rule bias_frames_means_stds:
@@ -345,7 +345,8 @@ rule skyflat_calibrated_science_images:
 
 rule lampflat_calibrated_standard_star_images:
     input:
-        "src/data/processed_photometry/science/standard_stars/corrected",
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/data/processed_photometry/science/standard_stars/wcs",
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/lampflat_calibrated_standard_star_images.pdf",
@@ -355,7 +356,8 @@ rule lampflat_calibrated_standard_star_images:
         "src/scripts/figures/lampflat_calibrated_standard_star_images.py"
 rule skyflat_calibrated_standard_star_images:
     input:
-        "src/data/processed_photometry/science/standard_stars/corrected",
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/data/processed_photometry/science/standard_stars/wcs",
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/skyflat_calibrated_standard_star_images.pdf",
@@ -365,7 +367,8 @@ rule skyflat_calibrated_standard_star_images:
         "src/scripts/figures/skyflat_calibrated_standard_star_images.py"
 rule standard_star_positions:
     input:
-        "src/data/processed_photometry/science/standard_stars/corrected",
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/data/processed_photometry/science/standard_stars/wcs",
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/standard_star_positions.pdf",
