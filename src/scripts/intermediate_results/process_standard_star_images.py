@@ -48,7 +48,7 @@ for flat_type in ["SKY", "LAMP"]:
             / "standard_stars"
             / "uncorrected"
         )
-        os.makedirs(filter_save_path, exist_ok=True)
+        filter_save_path.mkdir(parents=True, exist_ok=True)
 
         filter_collection = image_collection.filter(
             **{filter_name_column: filter_names[filter_name]}
