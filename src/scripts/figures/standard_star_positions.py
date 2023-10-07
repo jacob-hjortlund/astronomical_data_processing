@@ -151,6 +151,6 @@ ax.set_ylabel("Y [px]", fontsize=20)
 ax.tick_params(axis="both", which="major", labelsize=20)
 fig.tight_layout()
 fig.savefig(
-    paths.figures / "standard_star_position_issue.pdf",
+    paths.figures / "standard_star_positions.pdf",
     bbox_inches="tight",
 )
