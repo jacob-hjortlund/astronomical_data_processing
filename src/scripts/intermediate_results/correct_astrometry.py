@@ -57,7 +57,7 @@ for fits_file_path in fits_directory.glob("*.fits"):
         time.sleep(SLEEP_TIME)
 
     # Get job results
-    output_fits_file = client.get_output_fits_file(job_id)
+    output_fits_file = client.get_output_wcs_fits(job_id)
     save_path = save_directory / fits_file_path.name
     with save_path.open("wb") as f:
         f.write(output_fits_file.read())
