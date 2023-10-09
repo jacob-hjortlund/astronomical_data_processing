@@ -410,7 +410,7 @@ rule standard_star_positions:
         "src/scripts/figures/standard_star_positions.py"
 rule standard_star_calibration_posterior:
     input:
-        "src/data/processed_photometry/numbers/standard_star_aperture_phot",
+        "src/data/processed_photometry/numbers/standard_star_calibration",
         "src/scripts/figures/figure_utils.py"
     output:
         "src/tex/figures/standard_star_calibration.pdf",
