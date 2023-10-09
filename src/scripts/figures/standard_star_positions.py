@@ -56,13 +56,22 @@ image_path = (
     / "processed_photometry"
     / "science"
     / "standard_stars"
-    / "new-image.fits"
+    / "fits"
+    / "B_sky_image.fits"
 )
-image = ccdp.CCDData.read(image_path, relax=True, fix=True)
+wcs_path = (
+    paths.data
+    / "processed_photometry"
+    / "science"
+    / "standard_stars"
+    / "wcs"
+    / "B_sky_image.fits"
+)
 
-print("\n")
-print(image.wcs)
-print("\n")
+wcs_hdul = fits.open(wcs_path)
+wcs = WCS(wcs_hdul[0].header)
+image = ccdp.CCDData.read(image_path, relax=True, fix=True)
+image.wcs = wcs
 
 fig, ax = plt.subplots(figsize=(10, 10))
 utils.show_image(
@@ -142,6 +151,6 @@ ax.set_ylabel("Y [px]", fontsize=20)
 ax.tick_params(axis="both", which="major", labelsize=20)
 fig.tight_layout()
 fig.savefig(
-    paths.figures / "standard_star_position_issue.pdf",
+    paths.figures / "standard_star_positions.pdf",
     bbox_inches="tight",
 )

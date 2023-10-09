@@ -42,9 +42,9 @@ for flat_type in ["SKY", "LAMP"]:
         master_flat = ccdp.trim_image(master_flat[TRIM:-TRIM, TRIM:-TRIM])
 
         filter_save_path = save_path = (
-            paths.data / "processed_photometry" / "science" / "standard_stars"
+            paths.data / "processed_photometry" / "science" / "standard_stars" / "fits"
         )
-        os.makedirs(filter_save_path, exist_ok=True)
+        filter_save_path.mkdir(parents=True, exist_ok=True)
 
         filter_collection = image_collection.filter(
             **{filter_name_column: filter_names[filter_name]}
