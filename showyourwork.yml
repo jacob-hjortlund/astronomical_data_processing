@@ -453,7 +453,7 @@ dependencies:
     - src/tex/figures/lampflat_calibrated_standard_star_images.pdf
     - src/tex/figures/standard_star_positions.pdf
     - src/data/processed_photometry/numbers/standard_star_fwhm/
-    - src/tex/figures/standard_star_photometric_calibration.pdf
+    - src/tex/figures/standard_star_calibration.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
