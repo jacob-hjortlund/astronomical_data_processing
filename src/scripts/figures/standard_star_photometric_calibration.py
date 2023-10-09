@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 chain_path = (
     paths.data / "processed_photometry" / "numbers" / "standard_star_calibration"
 )
-chain_path.mkdir(parents=True, exist_ok=True)
 reader = em.backends.HDFBackend(chain_path / "chains.h5")
 
 tau = np.max(reader.get_autocorr_time())

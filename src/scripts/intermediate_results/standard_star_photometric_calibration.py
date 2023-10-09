@@ -14,6 +14,7 @@ photometry_path = (
 save_path = (
     paths.data / "processed_photometry" / "numbers" / "standard_star_calibration"
 )
+save_path.mkdir(parents=True, exist_ok=True)
 
 star_names = ["0", "B", "C"]
 flat_type = "sky"
