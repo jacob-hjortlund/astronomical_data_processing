@@ -438,7 +438,7 @@ dependencies:
     - src/scripts/figures/figure_utils.py
 
   src/scripts/figures/standard_star_photometric_calibration.py:
-    - src/data/processed_photometry/numbers/standard_star_aperture_phot/
+    - src/data/processed_photometry/numbers/standard_star_calibration/
     - src/scripts/figures/figure_utils.py
 
   src/tex/ms.tex:

@@ -264,7 +264,7 @@ rule standard_star_photometric_calibration:
     cache:
         True
     output:
-        directory("src/data/processed_photometry/numbers/standard_star_aperture_phot")
+        directory("src/data/processed_photometry/numbers/standard_star_calibration")
     script:
         "src/scripts/intermediate_results/standard_star_photometric_calibration.py"
 

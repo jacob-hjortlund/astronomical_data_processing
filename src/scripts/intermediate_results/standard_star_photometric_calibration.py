@@ -11,6 +11,9 @@ fits_path = paths.data / "processed_photometry" / "science" / "standard_stars" /
 photometry_path = (
     paths.data / "processed_photometry" / "numbers" / "standard_star_aperture_phot"
 )
+save_path = (
+    paths.data / "processed_photometry" / "numbers" / "standard_star_calibration"
+)
 
 star_names = ["0", "B", "C"]
 flat_type = "sky"
@@ -191,7 +194,7 @@ n_walkers = 32
 n_dim = 6
 init_pos = soln.x + 1e-4 * np.random.randn(n_walkers, n_dim)
 
-hdf5_path = photometry_path / "chains.h5"
+hdf5_path = save_path / "chains.h5"
 backend = em.backends.HDFBackend(hdf5_path)
 backend.reset(n_walkers, n_dim)
 
