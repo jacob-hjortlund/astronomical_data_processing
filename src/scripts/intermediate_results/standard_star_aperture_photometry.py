@@ -164,6 +164,3 @@ mag_and_mag_errs_df.to_csv(
     output_path / f"{flat_type}_aperture_phot.csv",
     index=True,
 )
-
-print("\nMag and mag errs:")
-print(mag_and_mag_errs_df)
