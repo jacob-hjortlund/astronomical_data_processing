@@ -245,6 +245,28 @@ rule standard_star_fwhm:
         directory("src/data/processed_photometry/numbers/standard_star_fwhm")
     script:
         "src/scripts/intermediate_results/standard_star_fwhm.py"
+rule standard_star_aperture_photometry:
+    input:
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/data/processed_photometry/numbers/standard_star_fwhm",
+        "src/scripts/intermediate_results/processing_utils.py"
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/numbers/standard_star_aperture_phot")
+    script:
+        "src/scripts/intermediate_results/standard_star_aperture_photometry.py"
+rule standard_star_photometric_calibration:
+    input:
+        "src/data/processed_photometry/science/standard_stars/fits",
+        "src/data/processed_photometry/numbers/standard_star_aperture_phot",
+        "src/scripts/intermediate_results/processing_utils.py"
+    cache:
+        True
+    output:
+        directory("src/data/processed_photometry/numbers/standard_star_aperture_phot")
+    script:
+        "src/scripts/intermediate_results/standard_star_photometric_calibration.py"
 
 # ------------------------------- NUMBERS ------------------------------- #
 
@@ -386,5 +408,15 @@ rule standard_star_positions:
         True
     script:
         "src/scripts/figures/standard_star_positions.py"
+rule standard_star_calibration_posterior:
+    input:
+        "src/data/processed_photometry/numbers/standard_star_aperture_phot",
+        "src/scripts/figures/figure_utils.py"
+    output:
+        "src/tex/figures/standard_star_calibration.pdf",
+    cache:
+        True
+    script:
+        "src/scripts/figures/standard_star_photometric_calibration.py"
 
 # ------------------------------- NUMBERS ------------------------------- #

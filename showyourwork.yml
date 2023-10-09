@@ -370,6 +370,16 @@ dependencies:
     - src/data/process_photometry/science/standard_stars/fits/
     - src/scripts/intermediate_results/processing_utils.py
 
+  src/scripts/intermediate_results/standard_star_aperture_photometry.py:
+    - src/data/processed_photometry/numbers/standard_star_fwhm/
+    - src/data/processed_photometry/science/standard_stars/fits/
+    - src/scripts/intermediate_results/processing_utils.py
+
+  src/scripts/intermediate_results/standard_star_photometric_calibration.py:
+    - src/data/processed_photometry/numbers/standard_star_aperture_phot/
+    - src/data/processed_photometry/science/standard_stars/fits/
+    - src/scripts/intermediate_results/processing_utils.py
+
   # -------------------- NUMBERS -------------------- #
 
   src/scripts/numbers/ron_estimates.py:
@@ -427,6 +437,10 @@ dependencies:
     - src/data/processed_photometry/science/standard_stars/wcs/
     - src/scripts/figures/figure_utils.py
 
+  src/scripts/figures/standard_star_photometric_calibration.py:
+    - src/data/processed_photometry/numbers/standard_star_aperture_phot/
+    - src/scripts/figures/figure_utils.py
+
   src/tex/ms.tex:
     #- src/tex/output/ron_estimates.dat
     - src/tex/figures/master_dark_frame.pdf
@@ -439,6 +453,7 @@ dependencies:
     - src/tex/figures/lampflat_calibrated_standard_star_images.pdf
     - src/tex/figures/standard_star_positions.pdf
     - src/data/processed_photometry/numbers/standard_star_fwhm/
+    - src/tex/figures/standard_star_photometric_calibration.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:
