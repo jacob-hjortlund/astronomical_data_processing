@@ -44,6 +44,4 @@ fig = corner.corner(
     label_kwargs={"fontsize": 16},
 )
 
-fig.savefig(
-    paths.data / "processed_photometry" / "figures" / "standard_star_calibration.pdf"
-)
+fig.savefig(paths.figures / "standard_star_calibration.pdf")
