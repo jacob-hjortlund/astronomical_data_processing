@@ -252,19 +252,6 @@ rule random_bias_frames:
         True
     script:
         "src/scripts/figures/random_bias_frames.py"
-
-rule bias_all_STATS:
-    input:
-        "src/data/raw_photometry",
-        "src/scripts/figures/figure_utils.py"
-    output:
-        "src/tex/figures/bias_all_histogram_2_1_3_images.pdf",
-        "src/tex/figures/bias_all_STATS_images.pdf.pdf",
-    cache:
-        True
-    script:
-        "src/scripts/figures/bias_STATS_table_fig.ipynb"
-
 rule bias_frame_histograms:
     input:
         "src/data/raw_photometry",
