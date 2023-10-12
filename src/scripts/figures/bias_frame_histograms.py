@@ -51,12 +51,12 @@ for i, (frame, frame_name) in enumerate(zip(frames, frame_names)):
     utils.show_image(
         frame,
         ax=ax[0,i],
-        fig=fig
+        fig=fig,
     )
     #ax[0,i].imshow(frame.data, norm='log', vmin=140, vmax=160)
     ax[0,i].set_xlabel("Pixel", fontsize=10)
     ax[0,i].set_ylabel("Pixel", fontsize=10)
-    ax[0,i].set_title(
-        f"{frame_name}",fontsize=16)
+    ax[0,i].set_title(f"{frame_name}",fontsize=16)
+    ax[0,i].imshow(frame.data, vmin=120, vmax=180)  # Set vmin and vmax
 fig.tight_layout()
 fig.savefig(paths.figures / "bias_frame_histograms.pdf")
