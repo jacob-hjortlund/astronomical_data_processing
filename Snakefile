@@ -271,7 +271,6 @@ rule random_bias_frames:
         True
     script:
         "src/scripts/figures/random_bias_frames.py"
-
 rule bias_frame_histograms:
     input:
         "src/data/raw_photometry",
