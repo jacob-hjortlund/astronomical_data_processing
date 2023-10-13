@@ -21,7 +21,7 @@ flat_type = "sky"
 filter_names = ["B", "V", "R"]
 airmass_correction = np.array([-0.25, -0.13, -0.09])
 
-v_mags = np.array([[13.481, 13.406, 14.003]])
+v_mags = np.array([13.481, 13.406, 14.003])
 v_mag_errs = np.array([0.0019, 0.0019, 0.0031])
 
 # B-V, V-R
@@ -37,18 +37,18 @@ color_errs = np.array(
 # B, V, R along rows, 0, B, C along columns
 magnitudes = np.array(
     [
-        colors[:, 0] + v_mags[0],
-        v_mags[0],
-        -colors[:, 1] + v_mags[0],
+        colors[:, 0] + v_mags,
+        v_mags,
+        -colors[:, 1] + v_mags,
     ]
-)
+).T
 magnitude_errs = np.array(
     [
         np.sqrt(color_errs[:, 0] ** 2 + v_mag_errs**2),
         v_mag_errs,
         np.sqrt(color_errs[:, 1] ** 2 + v_mag_errs**2),
     ]
-)
+).T
 
 airmasses = np.zeros(len(filter_names))
 estimated_magnitudes = []
@@ -234,38 +234,18 @@ soln = minimize(
     nll,
     initial_guess,
     args=(
-        magnitudes.T,
+        magnitudes,
         colors,
-        instrument_magnitudes.T,
-        magnitude_errs.T[:, 0],
+        instrument_magnitudes,
+        magnitude_errs[:, 0],
         color_errs,
-        estimated_magnitude_errs.T,
+        estimated_magnitude_errs,
     ),
     method="BFGS",
     options={"disp": True, "maxiter": 100000, "gtol": 1e-4},
 )
 
 print("\n Maximum likelihood estimation:")
-print(soln.x)
-
-nll = lambda *args: -independent_log_likelihood(*args)
-initial_guess = np.array([0, 0, 0, 1, 1, 1]) + 1e-4 * np.random.randn(6)
-soln = minimize(
-    nll,
-    initial_guess,
-    args=(
-        magnitudes.T,
-        colors,
-        instrument_magnitudes.T,
-        magnitude_errs.T,
-        color_errs,
-        estimated_magnitude_errs.T,
-    ),
-    method="BFGS",
-    options={"disp": True, "maxiter": 100000, "gtol": 1e-4},
-)
-
-print("\n Maximum likelihood estimation - independent:")
 print(soln.x)
 
 
@@ -284,33 +264,13 @@ sampler = em.EnsembleSampler(
     n_dim,
     log_posterior,
     args=(
-        magnitudes.T,
+        magnitudes,
         colors,
-        instrument_magnitudes.T,
-        magnitude_errs.T[:, 0],
+        instrument_magnitudes,
+        magnitude_errs[:, 0],
         color_errs,
-        estimated_magnitude_errs.T,
+        estimated_magnitude_errs,
     ),
     backend=backend,
 )
 sampler.run_mcmc(init_pos, 10000, progress=True)
-
-# hdf5_path = save_path / "chains_independent.h5"
-# backend = em.backends.HDFBackend(hdf5_path)
-# backend.reset(n_walkers, n_dim)
-
-# sampler = em.EnsembleSampler(
-#     n_walkers,
-#     n_dim,
-#     log_posterior,
-#     args=(
-#         magnitudes.T,
-#         colors,
-#         instrument_magnitudes.T,
-#         magnitude_errs.T[:, 0],
-#         color_errs,
-#         estimated_magnitude_errs.T,
-#     ),
-#     backend=backend,
-# )
-# sampler.run_mcmc(init_pos, 10000, progress=True)

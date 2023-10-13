@@ -225,7 +225,7 @@ def preprocess_dark(
         else:
             trimmed_dark = image
         bias_subtracted_dark = ccdp.subtract_bias(trimmed_dark, master_bias)
-        exptime_m1 = 1.0 / image.header[exptime_key] * u.second
+        exptime_m1 = 1.0 / (image.header[exptime_key] * u.second)
 
         calibrated_and_scaled_dark = ccdp.gain_correct(bias_subtracted_dark, exptime_m1)
         calibrated_and_scaled_dark.meta["calibrated"] = "True"
