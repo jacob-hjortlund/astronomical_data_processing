@@ -261,7 +261,6 @@ rule ron_estimates:
 
 # ------------------------------- FIGURES ------------------------------- #
 
-<<<<<<< HEAD
 # rule random_bias_frames:
 #     input:
 #         "src/data/raw_photometry",
@@ -273,18 +272,6 @@ rule ron_estimates:
 #     script:
 #         "src/scripts/figures/random_bias_frames.py"
 
-=======
-rule random_bias_frames:
-    input:
-        "src/data/raw_photometry",
-        "src/scripts/figures/figure_utils.py"
-    output:
-        "src/tex/figures/random_bias_frames.pdf",
-    cache:
-        True
-    script:
-        "src/scripts/figures/random_bias_frames.py"
->>>>>>> 54bdf8de38c72503e898aa46a9bb8f9875848ae1
 rule bias_frame_histograms:
     input:
         "src/data/raw_photometry",
