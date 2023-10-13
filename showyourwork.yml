@@ -25,309 +25,309 @@ dag:
 
 # Externally-hosted datasets, e.g. on Zenodo
 datasets:
-  10.5281/zenodo.8366343:
-    contents:
-      CALIB.zip:
-        CALIB:
-          EFOSC.2000-12-28T22:11:19.687.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
-          EFOSC.2000-12-30T05:17:49.057.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
-          EFOSC.2000-12-28T22:09:41.589.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
-          EFOSC.2000-10-27T20:41:24.411.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:41:24.411.fits
-          EFOSC.2001-01-04T00:15:36.618.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:15:36.618.fits
-          EFOSC.2000-12-29T05:23:58.412.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:23:58.412.fits
-          EFOSC.2000-12-31T09:12:23.518.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:12:23.518.fits
-          EFOSC.2000-12-28T22:11:52.400.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:52.400.fits
-          EFOSC.2000-12-30T04:19:22.088.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:22.088.fits
-          EFOSC.2000-12-30T04:20:28.315.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:20:28.315.fits
-          EFOSC.2000-10-28T10:08:03.127.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T10:08:03.127.fits
-          EFOSC.2000-12-31T05:33:18.674.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:18.674.fits
-          EFOSC.2000-10-28T09:37:30.239.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T09:37:30.239.fits
-          EFOSC.2000-12-31T09:11:30.098.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:11:30.098.fits
-          EFOSC.2000-12-30T05:35:34.841.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:35:34.841.fits
-          EFOSC.2000-12-31T05:21:06.095.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:06.095.fits
-          EFOSC.2000-12-31T05:38:31.003.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:38:31.003.fits
-          EFOSC.2000-12-31T05:32:43.628.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:43.628.fits
-          EFOSC.2000-12-31T05:20:00.851.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:00.851.fits
-          EFOSC.2000-12-30T05:38:10.034.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:38:10.034.fits
-          EFOSC.2000-12-31T09:16:13.309.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:13.309.fits
-          EFOSC.2000-12-29T09:22:38.580.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:38.580.fits
-          EFOSC.2000-12-30T05:10:39.402.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:10:39.402.fits
-          EFOSC.2000-12-29T22:08:05.339.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:05.339.fits
-          EFOSC.2000-12-30T05:19:27.625.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:19:27.625.fits
-          EFOSC.2001-01-04T00:23:59.656.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:59.656.fits
-          EFOSC.2000-12-30T05:14:45.207.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:14:45.207.fits
-          EFOSC.2000-10-27T10:02:55.312.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T10:02:55.312.fits
-          EFOSC.2000-12-29T06:56:30.101.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:56:30.101.fits
-          EFOSC.2001-01-04T00:13:47.773.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:13:47.773.fits
-          EFOSC.2000-12-31T05:33:53.981.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:53.981.fits
-          EFOSC.2000-12-29T09:18:49.884.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:49.884.fits
-          EFOSC.2000-12-30T05:33:07.681.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:07.681.fits
-          EFOSC.2000-12-29T06:59:33.081.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:59:33.081.fits
-          EFOSC.2001-01-03T08:48:55.476.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:55.476.fits
-          EFOSC.2001-01-03T08:56:03.899.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:56:03.899.fits
-          EFOSC.2000-12-30T06:41:58.131.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:41:58.131.fits
-          EFOSC.2000-12-29T05:27:50.801.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:50.801.fits
-          EFOSC.2000-12-29T05:18:31.412.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
-          EFOSC.2000-12-31T05:32:08.470.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:08.470.fits
-          EFOSC.2000-12-30T05:31:58.047.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:31:58.047.fits
-          EFOSC.2000-12-30T05:18:54.760.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:54.760.fits
-          EFOSC.2000-12-29T09:17:31.855.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:17:31.855.fits
-          EFOSC.2000-12-31T09:13:57.300.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:13:57.300.fits
-          EFOSC.2000-12-30T06:42:39.650.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:42:39.650.fits
-          EFOSC.2000-12-31T09:08:18.385.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:08:18.385.fits
-          EFOSC.2000-12-29T22:08:38.107.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:38.107.fits
-          EFOSC.2000-12-30T04:21:01.051.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:01.051.fits
-          EFOSC.2000-12-29T09:16:51.770.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:16:51.770.fits
-          EFOSC.2000-12-29T05:21:14.698.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:21:14.698.fits
-          EFOSC.2000-12-30T05:36:13.532.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:13.532.fits
-          EFOSC.2000-12-31T05:13:41.076.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:13:41.076.fits
-          EFOSC.2000-12-30T06:44:10.564.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:10.564.fits
-          EFOSC.2000-12-29T06:55:55.365.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:55:55.365.fits
-          EFOSC.2000-12-30T05:20:00.381.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:20:00.381.fits
-          EFOSC.2000-12-29T04:39:50.783.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
-          EFOSC.2000-12-29T22:07:32.408.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:07:32.408.fits
-          EFOSC.2000-12-28T13:35:24.270.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T13:35:24.270.fits
-          EFOSC.2000-12-29T05:26:12.621.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:12.621.fits
-          EFOSC.2001-01-04T00:24:50.308.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:24:50.308.fits
-          EFOSC.2000-12-31T00:19:16.506.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:16.506.fits
-          EFOSC.2000-12-31T09:14:44.559.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:14:44.559.fits
-          EFOSC.2000-12-31T05:36:28.015.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:36:28.015.fits
-          EFOSC.2000-12-31T09:09:29.127.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:09:29.127.fits
-          EFOSC.2000-12-31T05:20:33.429.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:33.429.fits
-          EFOSC.2001-01-03T08:48:04.849.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:04.849.fits
-          EFOSC.2001-01-03T08:55:18.187.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:55:18.187.fits
-          EFOSC.2000-12-30T05:18:21.925.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:21.925.fits
-          EFOSC.2000-12-30T05:32:32.841.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:32:32.841.fits
-          EFOSC.2000-12-29T04:38:45.156.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:38:45.156.fits
-          EFOSC.2000-12-31T00:20:22.775.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:20:22.775.fits
-          EFOSC.2001-01-04T00:14:59.956.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:59.956.fits
-          EFOSC.2000-12-29T05:19:53.067.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:19:53.067.fits
-          EFOSC.2000-12-31T05:15:02.963.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:15:02.963.fits
-          EFOSC.2000-12-30T05:13:23.546.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:13:23.546.fits
-          EFOSC.2000-12-29T22:09:43.891.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:43.891.fits
-          EFOSC.2000-12-30T06:30:57.048.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:57.048.fits
-          EFOSC.2000-12-31T05:17:46.494.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:17:46.494.fits
-          EFOSC.2000-12-29T05:25:39.820.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:25:39.820.fits
-          EFOSC.2000-12-29T06:58:14.598.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:58:14.598.fits
-          EFOSC.2000-12-29T09:20:49.768.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:20:49.768.fits
-          EFOSC.2000-12-29T06:57:04.734.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:04.734.fits
-          EFOSC.2000-12-31T00:19:49.346.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:49.346.fits
-          EFOSC.2000-12-29T05:22:36.599.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:22:36.599.fits
-          EFOSC.2000-12-31T05:19:27.855.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:19:27.855.fits
-          EFOSC.2000-12-29T05:27:18.121.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:18.121.fits
-          EFOSC.2000-12-29T07:01:36.689.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:01:36.689.fits
-          EFOSC.2001-01-03T08:49:41.042.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:49:41.042.fits
-          EFOSC.2000-12-30T05:37:31.359.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:37:31.359.fits
-          EFOSC.2000-12-30T06:44:52.264.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:52.264.fits
-          EFOSC.2001-01-04T00:22:25.677.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:22:25.677.fits
-          EFOSC.2001-01-03T08:54:27.270.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:54:27.270.fits
-          EFOSC.2000-12-30T04:21:33.840.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:33.840.fits
-          EFOSC.2000-12-29T09:18:11.147.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:11.147.fits
-          EFOSC.2000-12-31T00:18:11.087.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:11.087.fits
-          EFOSC.2000-12-29T07:00:55.486.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:55.486.fits
-          EFOSC.2000-12-28T22:10:46.963.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:46.963.fits
-          EFOSC.2001-01-04T00:23:11.456.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:11.456.fits
-          EFOSC.2000-12-30T05:33:42.199.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:42.199.fits
-          EFOSC.2000-12-30T06:30:20.105.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:20.105.fits
-          EFOSC.2000-12-30T05:34:16.752.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:34:16.752.fits
-          EFOSC.2000-12-31T05:35:47.059.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:35:47.059.fits
-          EFOSC.2000-10-27T20:10:52.021.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:10:52.021.fits
-          EFOSC.2000-12-31T00:18:43.730.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:43.730.fits
-          EFOSC.2000-12-30T04:19:55.000.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
-          EFOSC.2000-12-31T09:16:55.706.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:55.706.fits
-          EFOSC.2000-12-29T06:57:39.620.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:39.620.fits
-          EFOSC.2000-12-28T22:10:14.308.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:14.308.fits
-          EFOSC.2000-12-31T05:12:19.406.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:12:19.406.fits
-          EFOSC.2000-12-30T06:29:43.274.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:29:43.274.fits
-          EFOSC.2000-12-31T09:15:29.710.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:15:29.710.fits
-          EFOSC.2000-12-29T04:40:56.374.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:56.374.fits
-          EFOSC.2000-12-29T09:21:26.339.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:21:26.339.fits
-          EFOSC.2001-01-04T00:16:13.424.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:16:13.424.fits
-          EFOSC.2001-01-04T00:21:41.539.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:21:41.539.fits
-          EFOSC.2000-12-30T05:12:01.644.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:12:01.644.fits
-          EFOSC.2000-12-31T05:16:24.599.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:16:24.599.fits
-          EFOSC.2000-12-31T05:34:28.948.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:34:28.948.fits
-          EFOSC.2000-12-30T05:16:07.522.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:16:07.522.fits
-          EFOSC.2000-12-30T06:45:34.118.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:45:34.118.fits
-          EFOSC.2000-12-29T04:40:23.593.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:23.593.fits
-          EFOSC.2000-12-29T05:26:45.460.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:45.460.fits
-          EFOSC.2000-12-29T07:00:14.337.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:14.337.fits
-          EFOSC.2001-01-04T00:14:23.696.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:23.696.fits
-          EFOSC.2000-10-27T09:32:22.516.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T09:32:22.516.fits
-          EFOSC.2000-12-31T05:21:38.719.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:38.719.fits
-          EFOSC.2000-12-28T21:34:10.326.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T21:34:10.326.fits
-          EFOSC.2000-12-30T06:31:41.617.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:31:41.617.fits
-          EFOSC.2000-12-31T09:10:32.319.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:10:32.319.fits
-          EFOSC.2000-12-29T09:19:28.203.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:19:28.203.fits
-          EFOSC.2000-12-29T09:22:02.410.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:02.410.fits
-          EFOSC.2000-12-30T06:43:21.516.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:43:21.516.fits
-          EFOSC.2000-12-30T14:32:08.824.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T14:32:08.824.fits
-          EFOSC.2000-12-29T04:39:18.017.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:18.017.fits
-          EFOSC.2000-12-29T09:23:14.312.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:23:14.312.fits
-          EFOSC.2000-12-30T06:32:55.178.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:55.178.fits
-          EFOSC.2000-12-31T05:37:08.959.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:08.959.fits
-          EFOSC.2000-12-30T06:32:18.327.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:18.327.fits
-          EFOSC.2000-12-31T05:37:50.053.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:50.053.fits
-          EFOSC.2000-12-29T22:09:10.995.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
-          EFOSC.2000-12-29T07:02:17.818.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
-          EFOSC.2000-12-30T05:36:52.414.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
-      SCIENCE.zip:
-        SCIENCE:
-          EFOSC.2000-12-30T07:58:50.968.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
-          EFOSC.2000-12-30T08:00:22.811.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
-          EFOSC.2000-12-30T07:59:36.806.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
+  # 10.5281/zenodo.8366343:
+  #   contents:
+  #     CALIB.zip:
+  #       CALIB:
+  #         EFOSC.2000-12-28T22:11:19.687.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
+  #         EFOSC.2000-12-30T05:17:49.057.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
+  #         EFOSC.2000-12-28T22:09:41.589.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
+  #         EFOSC.2000-10-27T20:41:24.411.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:41:24.411.fits
+  #         EFOSC.2001-01-04T00:15:36.618.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:15:36.618.fits
+  #         EFOSC.2000-12-29T05:23:58.412.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:23:58.412.fits
+  #         EFOSC.2000-12-31T09:12:23.518.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:12:23.518.fits
+  #         EFOSC.2000-12-28T22:11:52.400.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:52.400.fits
+  #         EFOSC.2000-12-30T04:19:22.088.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:22.088.fits
+  #         EFOSC.2000-12-30T04:20:28.315.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:20:28.315.fits
+  #         EFOSC.2000-10-28T10:08:03.127.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T10:08:03.127.fits
+  #         EFOSC.2000-12-31T05:33:18.674.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:18.674.fits
+  #         EFOSC.2000-10-28T09:37:30.239.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T09:37:30.239.fits
+  #         EFOSC.2000-12-31T09:11:30.098.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:11:30.098.fits
+  #         EFOSC.2000-12-30T05:35:34.841.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:35:34.841.fits
+  #         EFOSC.2000-12-31T05:21:06.095.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:06.095.fits
+  #         EFOSC.2000-12-31T05:38:31.003.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:38:31.003.fits
+  #         EFOSC.2000-12-31T05:32:43.628.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:43.628.fits
+  #         EFOSC.2000-12-31T05:20:00.851.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:00.851.fits
+  #         EFOSC.2000-12-30T05:38:10.034.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:38:10.034.fits
+  #         EFOSC.2000-12-31T09:16:13.309.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:13.309.fits
+  #         EFOSC.2000-12-29T09:22:38.580.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:38.580.fits
+  #         EFOSC.2000-12-30T05:10:39.402.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:10:39.402.fits
+  #         EFOSC.2000-12-29T22:08:05.339.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:05.339.fits
+  #         EFOSC.2000-12-30T05:19:27.625.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:19:27.625.fits
+  #         EFOSC.2001-01-04T00:23:59.656.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:59.656.fits
+  #         EFOSC.2000-12-30T05:14:45.207.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:14:45.207.fits
+  #         EFOSC.2000-10-27T10:02:55.312.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T10:02:55.312.fits
+  #         EFOSC.2000-12-29T06:56:30.101.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:56:30.101.fits
+  #         EFOSC.2001-01-04T00:13:47.773.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:13:47.773.fits
+  #         EFOSC.2000-12-31T05:33:53.981.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:53.981.fits
+  #         EFOSC.2000-12-29T09:18:49.884.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:49.884.fits
+  #         EFOSC.2000-12-30T05:33:07.681.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:07.681.fits
+  #         EFOSC.2000-12-29T06:59:33.081.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:59:33.081.fits
+  #         EFOSC.2001-01-03T08:48:55.476.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:55.476.fits
+  #         EFOSC.2001-01-03T08:56:03.899.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:56:03.899.fits
+  #         EFOSC.2000-12-30T06:41:58.131.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:41:58.131.fits
+  #         EFOSC.2000-12-29T05:27:50.801.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:50.801.fits
+  #         EFOSC.2000-12-29T05:18:31.412.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
+  #         EFOSC.2000-12-31T05:32:08.470.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:08.470.fits
+  #         EFOSC.2000-12-30T05:31:58.047.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:31:58.047.fits
+  #         EFOSC.2000-12-30T05:18:54.760.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:54.760.fits
+  #         EFOSC.2000-12-29T09:17:31.855.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:17:31.855.fits
+  #         EFOSC.2000-12-31T09:13:57.300.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:13:57.300.fits
+  #         EFOSC.2000-12-30T06:42:39.650.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:42:39.650.fits
+  #         EFOSC.2000-12-31T09:08:18.385.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:08:18.385.fits
+  #         EFOSC.2000-12-29T22:08:38.107.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:38.107.fits
+  #         EFOSC.2000-12-30T04:21:01.051.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:01.051.fits
+  #         EFOSC.2000-12-29T09:16:51.770.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:16:51.770.fits
+  #         EFOSC.2000-12-29T05:21:14.698.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:21:14.698.fits
+  #         EFOSC.2000-12-30T05:36:13.532.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:13.532.fits
+  #         EFOSC.2000-12-31T05:13:41.076.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:13:41.076.fits
+  #         EFOSC.2000-12-30T06:44:10.564.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:10.564.fits
+  #         EFOSC.2000-12-29T06:55:55.365.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:55:55.365.fits
+  #         EFOSC.2000-12-30T05:20:00.381.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:20:00.381.fits
+  #         EFOSC.2000-12-29T04:39:50.783.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
+  #         EFOSC.2000-12-29T22:07:32.408.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:07:32.408.fits
+  #         EFOSC.2000-12-28T13:35:24.270.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T13:35:24.270.fits
+  #         EFOSC.2000-12-29T05:26:12.621.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:12.621.fits
+  #         EFOSC.2001-01-04T00:24:50.308.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:24:50.308.fits
+  #         EFOSC.2000-12-31T00:19:16.506.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:16.506.fits
+  #         EFOSC.2000-12-31T09:14:44.559.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:14:44.559.fits
+  #         EFOSC.2000-12-31T05:36:28.015.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:36:28.015.fits
+  #         EFOSC.2000-12-31T09:09:29.127.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:09:29.127.fits
+  #         EFOSC.2000-12-31T05:20:33.429.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:33.429.fits
+  #         EFOSC.2001-01-03T08:48:04.849.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:04.849.fits
+  #         EFOSC.2001-01-03T08:55:18.187.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:55:18.187.fits
+  #         EFOSC.2000-12-30T05:18:21.925.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:21.925.fits
+  #         EFOSC.2000-12-30T05:32:32.841.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:32:32.841.fits
+  #         EFOSC.2000-12-29T04:38:45.156.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:38:45.156.fits
+  #         EFOSC.2000-12-31T00:20:22.775.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:20:22.775.fits
+  #         EFOSC.2001-01-04T00:14:59.956.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:59.956.fits
+  #         EFOSC.2000-12-29T05:19:53.067.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:19:53.067.fits
+  #         EFOSC.2000-12-31T05:15:02.963.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:15:02.963.fits
+  #         EFOSC.2000-12-30T05:13:23.546.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:13:23.546.fits
+  #         EFOSC.2000-12-29T22:09:43.891.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:43.891.fits
+  #         EFOSC.2000-12-30T06:30:57.048.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:57.048.fits
+  #         EFOSC.2000-12-31T05:17:46.494.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:17:46.494.fits
+  #         EFOSC.2000-12-29T05:25:39.820.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:25:39.820.fits
+  #         EFOSC.2000-12-29T06:58:14.598.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:58:14.598.fits
+  #         EFOSC.2000-12-29T09:20:49.768.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:20:49.768.fits
+  #         EFOSC.2000-12-29T06:57:04.734.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:04.734.fits
+  #         EFOSC.2000-12-31T00:19:49.346.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:49.346.fits
+  #         EFOSC.2000-12-29T05:22:36.599.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:22:36.599.fits
+  #         EFOSC.2000-12-31T05:19:27.855.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:19:27.855.fits
+  #         EFOSC.2000-12-29T05:27:18.121.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:18.121.fits
+  #         EFOSC.2000-12-29T07:01:36.689.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:01:36.689.fits
+  #         EFOSC.2001-01-03T08:49:41.042.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:49:41.042.fits
+  #         EFOSC.2000-12-30T05:37:31.359.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:37:31.359.fits
+  #         EFOSC.2000-12-30T06:44:52.264.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:52.264.fits
+  #         EFOSC.2001-01-04T00:22:25.677.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:22:25.677.fits
+  #         EFOSC.2001-01-03T08:54:27.270.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:54:27.270.fits
+  #         EFOSC.2000-12-30T04:21:33.840.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:33.840.fits
+  #         EFOSC.2000-12-29T09:18:11.147.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:11.147.fits
+  #         EFOSC.2000-12-31T00:18:11.087.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:11.087.fits
+  #         EFOSC.2000-12-29T07:00:55.486.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:55.486.fits
+  #         EFOSC.2000-12-28T22:10:46.963.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:46.963.fits
+  #         EFOSC.2001-01-04T00:23:11.456.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:11.456.fits
+  #         EFOSC.2000-12-30T05:33:42.199.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:42.199.fits
+  #         EFOSC.2000-12-30T06:30:20.105.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:20.105.fits
+  #         EFOSC.2000-12-30T05:34:16.752.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:34:16.752.fits
+  #         EFOSC.2000-12-31T05:35:47.059.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:35:47.059.fits
+  #         EFOSC.2000-10-27T20:10:52.021.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:10:52.021.fits
+  #         EFOSC.2000-12-31T00:18:43.730.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:43.730.fits
+  #         EFOSC.2000-12-30T04:19:55.000.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
+  #         EFOSC.2000-12-31T09:16:55.706.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:55.706.fits
+  #         EFOSC.2000-12-29T06:57:39.620.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:39.620.fits
+  #         EFOSC.2000-12-28T22:10:14.308.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:14.308.fits
+  #         EFOSC.2000-12-31T05:12:19.406.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:12:19.406.fits
+  #         EFOSC.2000-12-30T06:29:43.274.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:29:43.274.fits
+  #         EFOSC.2000-12-31T09:15:29.710.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:15:29.710.fits
+  #         EFOSC.2000-12-29T04:40:56.374.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:56.374.fits
+  #         EFOSC.2000-12-29T09:21:26.339.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:21:26.339.fits
+  #         EFOSC.2001-01-04T00:16:13.424.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:16:13.424.fits
+  #         EFOSC.2001-01-04T00:21:41.539.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:21:41.539.fits
+  #         EFOSC.2000-12-30T05:12:01.644.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:12:01.644.fits
+  #         EFOSC.2000-12-31T05:16:24.599.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:16:24.599.fits
+  #         EFOSC.2000-12-31T05:34:28.948.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:34:28.948.fits
+  #         EFOSC.2000-12-30T05:16:07.522.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:16:07.522.fits
+  #         EFOSC.2000-12-30T06:45:34.118.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:45:34.118.fits
+  #         EFOSC.2000-12-29T04:40:23.593.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:23.593.fits
+  #         EFOSC.2000-12-29T05:26:45.460.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:45.460.fits
+  #         EFOSC.2000-12-29T07:00:14.337.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:14.337.fits
+  #         EFOSC.2001-01-04T00:14:23.696.fits: src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:23.696.fits
+  #         EFOSC.2000-10-27T09:32:22.516.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T09:32:22.516.fits
+  #         EFOSC.2000-12-31T05:21:38.719.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:38.719.fits
+  #         EFOSC.2000-12-28T21:34:10.326.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T21:34:10.326.fits
+  #         EFOSC.2000-12-30T06:31:41.617.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:31:41.617.fits
+  #         EFOSC.2000-12-31T09:10:32.319.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:10:32.319.fits
+  #         EFOSC.2000-12-29T09:19:28.203.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:19:28.203.fits
+  #         EFOSC.2000-12-29T09:22:02.410.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:02.410.fits
+  #         EFOSC.2000-12-30T06:43:21.516.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:43:21.516.fits
+  #         EFOSC.2000-12-30T14:32:08.824.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T14:32:08.824.fits
+  #         EFOSC.2000-12-29T04:39:18.017.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:18.017.fits
+  #         EFOSC.2000-12-29T09:23:14.312.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:23:14.312.fits
+  #         EFOSC.2000-12-30T06:32:55.178.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:55.178.fits
+  #         EFOSC.2000-12-31T05:37:08.959.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:08.959.fits
+  #         EFOSC.2000-12-30T06:32:18.327.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:18.327.fits
+  #         EFOSC.2000-12-31T05:37:50.053.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:50.053.fits
+  #         EFOSC.2000-12-29T22:09:10.995.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
+  #         EFOSC.2000-12-29T07:02:17.818.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
+  #         EFOSC.2000-12-30T05:36:52.414.fits: src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
+  #     SCIENCE.zip:
+  #       SCIENCE:
+  #         EFOSC.2000-12-30T07:58:50.968.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
+  #         EFOSC.2000-12-30T08:00:22.811.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
+  #         EFOSC.2000-12-30T07:59:36.806.fits: src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
           
 # Custom file dependencies
 dependencies:
 
   # -------------------- INTERMEDIATE RESULTS -------------------- #
 
-  src/scripts/intermediate_results/download_raw_data.py:
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:41:24.411.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:15:36.618.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:23:58.412.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:12:23.518.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:52.400.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:22.088.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:20:28.315.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T10:08:03.127.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:18.674.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T09:37:30.239.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:11:30.098.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:35:34.841.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:06.095.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:38:31.003.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:43.628.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:00.851.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:38:10.034.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:13.309.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:38.580.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:10:39.402.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:05.339.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:19:27.625.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:59.656.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:14:45.207.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T10:02:55.312.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:56:30.101.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:13:47.773.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:53.981.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:49.884.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:07.681.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:59:33.081.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:55.476.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:56:03.899.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:41:58.131.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:50.801.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:08.470.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:31:58.047.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:54.760.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:17:31.855.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:13:57.300.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:42:39.650.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:08:18.385.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:38.107.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:01.051.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:16:51.770.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:21:14.698.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:13.532.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:13:41.076.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:10.564.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:55:55.365.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:20:00.381.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:07:32.408.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T13:35:24.270.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:12.621.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:24:50.308.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:16.506.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:14:44.559.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:36:28.015.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:09:29.127.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:33.429.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:04.849.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:55:18.187.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:21.925.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:32:32.841.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:38:45.156.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:20:22.775.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:59.956.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:19:53.067.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:15:02.963.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:13:23.546.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:43.891.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:57.048.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:17:46.494.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:25:39.820.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:58:14.598.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:20:49.768.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:04.734.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:49.346.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:22:36.599.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:19:27.855.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:18.121.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:01:36.689.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:49:41.042.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:37:31.359.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:52.264.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:22:25.677.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:54:27.270.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:33.840.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:11.147.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:11.087.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:55.486.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:46.963.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:11.456.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:42.199.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:20.105.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:34:16.752.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:35:47.059.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:10:52.021.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:43.730.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:55.706.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:39.620.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:14.308.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:12:19.406.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:29:43.274.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:15:29.710.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:56.374.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:21:26.339.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:16:13.424.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:21:41.539.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:12:01.644.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:16:24.599.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:34:28.948.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:16:07.522.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:45:34.118.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:23.593.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:45.460.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:14.337.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:23.696.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T09:32:22.516.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:38.719.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T21:34:10.326.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:31:41.617.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:10:32.319.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:19:28.203.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:02.410.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:43:21.516.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T14:32:08.824.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:18.017.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:23:14.312.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:55.178.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:08.959.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:18.327.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:50.053.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
-    - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
-    - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
+  # src/scripts/intermediate_results/download_raw_data.py:
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:19.687.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:17:49.057.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:09:41.589.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:41:24.411.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:15:36.618.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:23:58.412.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:12:23.518.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:11:52.400.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:22.088.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:20:28.315.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T10:08:03.127.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:18.674.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-28T09:37:30.239.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:11:30.098.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:35:34.841.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:06.095.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:38:31.003.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:43.628.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:00.851.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:38:10.034.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:13.309.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:38.580.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:10:39.402.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:05.339.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:19:27.625.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:59.656.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:14:45.207.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T10:02:55.312.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:56:30.101.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:13:47.773.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:33:53.981.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:49.884.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:07.681.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:59:33.081.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:55.476.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:56:03.899.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:41:58.131.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:50.801.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:18:31.412.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:32:08.470.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:31:58.047.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:54.760.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:17:31.855.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:13:57.300.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:42:39.650.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:08:18.385.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:08:38.107.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:01.051.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:16:51.770.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:21:14.698.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:13.532.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:13:41.076.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:10.564.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:55:55.365.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:20:00.381.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:50.783.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:07:32.408.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T13:35:24.270.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:12.621.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:24:50.308.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:16.506.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:14:44.559.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:36:28.015.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:09:29.127.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:20:33.429.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:48:04.849.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:55:18.187.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:18:21.925.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:32:32.841.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:38:45.156.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:20:22.775.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:59.956.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:19:53.067.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:15:02.963.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:13:23.546.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:43.891.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:57.048.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:17:46.494.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:25:39.820.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:58:14.598.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:20:49.768.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:04.734.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:19:49.346.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:22:36.599.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:19:27.855.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:27:18.121.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:01:36.689.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:49:41.042.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:37:31.359.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:44:52.264.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:22:25.677.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-03T08:54:27.270.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:21:33.840.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:18:11.147.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:11.087.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:55.486.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:46.963.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:23:11.456.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:33:42.199.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:30:20.105.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:34:16.752.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:35:47.059.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T20:10:52.021.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T00:18:43.730.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T04:19:55.000.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:16:55.706.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T06:57:39.620.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T22:10:14.308.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:12:19.406.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:29:43.274.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:15:29.710.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:56.374.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:21:26.339.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:16:13.424.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:21:41.539.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:12:01.644.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:16:24.599.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:34:28.948.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:16:07.522.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:45:34.118.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:40:23.593.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T05:26:45.460.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:00:14.337.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2001-01-04T00:14:23.696.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-10-27T09:32:22.516.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:21:38.719.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-28T21:34:10.326.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:31:41.617.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T09:10:32.319.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:19:28.203.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:22:02.410.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:43:21.516.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T14:32:08.824.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T04:39:18.017.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T09:23:14.312.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:55.178.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:08.959.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T06:32:18.327.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-31T05:37:50.053.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T22:09:10.995.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-29T07:02:17.818.fits
+  #   - src/data/zenodo_archive/CALIB/EFOSC.2000-12-30T05:36:52.414.fits
+  #   - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:58:50.968.fits
+  #   - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T08:00:22.811.fits
+  #   - src/data/zenodo_archive/SCIENCE/EFOSC.2000-12-30T07:59:36.806.fits
 
   src/scripts/intermediate_results/bias_frames_means_stds.py:
     - src/data/raw_photometry/
@@ -368,6 +368,16 @@ dependencies:
 
   src/scripts/intermediate_results/standard_star_fwhm.py:
     - src/data/process_photometry/science/standard_stars/fits/
+    - src/scripts/intermediate_results/processing_utils.py
+
+  src/scripts/intermediate_results/standard_star_aperture_photometry.py:
+    - src/data/processed_photometry/numbers/standard_star_fwhm/
+    - src/data/processed_photometry/science/standard_stars/fits/
+    - src/scripts/intermediate_results/processing_utils.py
+
+  src/scripts/intermediate_results/standard_star_photometric_calibration.py:
+    - src/data/processed_photometry/numbers/standard_star_aperture_phot/
+    - src/data/processed_photometry/science/standard_stars/fits/
     - src/scripts/intermediate_results/processing_utils.py
 
   # -------------------- NUMBERS -------------------- #
@@ -427,6 +437,10 @@ dependencies:
     - src/data/processed_photometry/science/standard_stars/wcs/
     - src/scripts/figures/figure_utils.py
 
+  src/scripts/figures/standard_star_photometric_calibration.py:
+    - src/data/processed_photometry/numbers/standard_star_calibration/
+    - src/scripts/figures/figure_utils.py
+
   src/tex/ms.tex:
     #- src/tex/output/ron_estimates.dat
     - src/tex/figures/master_dark_frame.pdf
@@ -439,6 +453,7 @@ dependencies:
     - src/tex/figures/lampflat_calibrated_standard_star_images.pdf
     - src/tex/figures/standard_star_positions.pdf
     - src/data/processed_photometry/numbers/standard_star_fwhm/
+    - src/tex/figures/standard_star_calibration.pdf
 #   # src/scripts/my_script.py:
 #   #   - src/data/dataset_for_my_script.dat
 #   src/tex/ms.tex:

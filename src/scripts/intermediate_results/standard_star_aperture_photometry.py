@@ -2,11 +2,9 @@ import paths
 import numpy as np
 import pandas as pd
 import ccdproc as ccdp
-import photutils as phot
 import astropy.units as u
-import processing_utils as putils
 
-from astropy.stats import sigma_clipped_stats, SigmaClip
+from astropy.stats import SigmaClip
 from photutils.aperture import CircularAperture, CircularAnnulus, aperture_photometry
 
 fits_path = paths.data / "processed_photometry" / "science" / "standard_stars" / "fits"
