@@ -4,7 +4,8 @@ import ccdproc as ccdp
 from pathlib import Path
 
 IMG_DIM = 1030
-zenodo_path = paths.data / "zenodo_archive"
+# zenodo_path = paths.data / "zenodo_archive"
+zenodo_path = paths.static / "zenodo_archive"
 raw_path = paths.data / "raw_photometry"
 
 calib_object_names = ["BIAS", "DARK", "SKYFLAT", "LAMPFLAT"]
