@@ -80,30 +80,61 @@ print(air_mass_zero_point_corrections)
 # Full correction
 
 
-def llh(
+def independent_llh(
     theta,
     standard_mags,
     standard_colors,
     instrument_mags,
-    standard_mag_errs,
+    standard_v_mag_err,
     standard_color_errs,
     instrument_mag_errs,
 ):
     cb2, cv2, cr2, cb3, cv3, cr3 = theta
     theta_3 = np.array([cb3, cv3, cr3])
 
-    cov = np.diag(standard_mag_errs**2 + instrument_mag_errs**2)
-    cov[0, 0] += cb2**2 * standard_color_errs[0] ** 2
+    cov = standard_v_mag_err**2 + np.diag(instrument_mag_errs**2)
+    log_norm = -0.5 * np.log(np.linalg.det(cov)) - 0.5 * np.log(2 * np.pi)
+
+    design_matrix = np.array([[cb2, 0], [0, cv2], [0, cr2]])
+    corrected_mags = instrument_mags + design_matrix @ standard_colors + theta_3
+    residual = corrected_mags - standard_mags
+    log_likelihood = log_norm - 0.5 * residual @ np.linalg.inv(cov) @ residual
+
+    return log_likelihood
+
+
+def llh(
+    theta,
+    standard_mags,
+    standard_colors,
+    instrument_mags,
+    standard_v_mag_err,
+    standard_color_errs,
+    instrument_mag_errs,
+):
+    cb2, cv2, cr2, cb3, cv3, cr3 = theta
+    theta_3 = np.array([cb3, cv3, cr3])
+
+    cov = np.diag(standard_v_mag_err**2 + instrument_mag_errs**2)
+
+    cov[0, 0] += (cb2 - 1) ** 2 * standard_color_errs[0] ** 2
     cov[1, 1] += cv2**2 * standard_color_errs[1] ** 2
     cov[2, 2] += cr2**2 * standard_color_errs[1] ** 2
-    cov[1, 2] += cv2 * cr2 * standard_color_errs[1] ** 2
-    cov[2, 1] += cov[1, 2]
+
+    cov[0, 1] -= standard_v_mag_err**2
+    cov[1, 0] = cov[0, 1]
+
+    cov[0, 2] -= standard_v_mag_err**2
+    cov[2, 0] = cov[0, 2]
+
+    cov[1, 2] += standard_v_mag_err**2 + cv2 * cr2 * standard_color_errs[1] ** 2
+    cov[2, 1] = cov[1, 2]
 
     log_norm = -0.5 * np.log(np.linalg.det(cov)) - 0.5 * np.log(2 * np.pi)
 
     design_matrix = np.array([[cb2, 0], [0, cv2], [0, cr2]])
     corrected_mags = instrument_mags + design_matrix @ standard_colors + theta_3
-    residual = standard_mags - corrected_mags
+    residual = corrected_mags - standard_mags
     log_likelihood = log_norm - 0.5 * residual @ np.linalg.inv(cov) @ residual
 
     return log_likelihood
@@ -122,6 +153,31 @@ def log_likelihood(
     n_stars = len(standard_mags)
     for i in range(n_stars):
         log_likelihood += llh(
+            theta,
+            standard_mags[i],
+            standard_colors[i],
+            instrument_mags[i],
+            standard_mag_errs[i],
+            standard_color_errs[i],
+            instrument_mag_errs[i],
+        )
+
+    return log_likelihood
+
+
+def independent_log_likelihood(
+    theta,
+    standard_mags,
+    standard_colors,
+    instrument_mags,
+    standard_mag_errs,
+    standard_color_errs,
+    instrument_mag_errs,
+):
+    log_likelihood = 0.0
+    n_stars = len(standard_mags)
+    for i in range(n_stars):
+        log_likelihood += independent_llh(
             theta,
             standard_mags[i],
             standard_colors[i],
@@ -153,7 +209,7 @@ def log_posterior(
     standard_color_errs,
     instrument_mag_errs,
 ):
-    log_prior_ = log_prior(theta)
+    log_prior_ = 0.0  # log_prior(theta)
     log_likelihood_ = log_likelihood(
         theta,
         standard_mags,
@@ -173,7 +229,27 @@ def log_posterior(
 
 np.random.seed(42)
 nll = lambda *args: -log_likelihood(*args)
-initial_guess = np.zeros(6) + 0.1 * np.random.randn(6)
+initial_guess = np.array([0, 0, 0, 1, 1, 1]) + 1e-4 * np.random.randn(6)
+soln = minimize(
+    nll,
+    initial_guess,
+    args=(
+        magnitudes.T,
+        colors,
+        instrument_magnitudes.T,
+        magnitude_errs.T[:, 0],
+        color_errs,
+        estimated_magnitude_errs.T,
+    ),
+    method="BFGS",
+    options={"disp": True, "maxiter": 100000, "gtol": 1e-4},
+)
+
+print("\n Maximum likelihood estimation:")
+print(soln.x)
+
+nll = lambda *args: -independent_log_likelihood(*args)
+initial_guess = np.array([0, 0, 0, 1, 1, 1]) + 1e-4 * np.random.randn(6)
 soln = minimize(
     nll,
     initial_guess,
@@ -188,6 +264,10 @@ soln = minimize(
     method="BFGS",
     options={"disp": True, "maxiter": 100000, "gtol": 1e-4},
 )
+
+print("\n Maximum likelihood estimation - independent:")
+print(soln.x)
+
 
 # MCMC
 
@@ -207,10 +287,30 @@ sampler = em.EnsembleSampler(
         magnitudes.T,
         colors,
         instrument_magnitudes.T,
-        magnitude_errs.T,
+        magnitude_errs.T[:, 0],
         color_errs,
         estimated_magnitude_errs.T,
     ),
     backend=backend,
 )
 sampler.run_mcmc(init_pos, 10000, progress=True)
+
+# hdf5_path = save_path / "chains_independent.h5"
+# backend = em.backends.HDFBackend(hdf5_path)
+# backend.reset(n_walkers, n_dim)
+
+# sampler = em.EnsembleSampler(
+#     n_walkers,
+#     n_dim,
+#     log_posterior,
+#     args=(
+#         magnitudes.T,
+#         colors,
+#         instrument_magnitudes.T,
+#         magnitude_errs.T[:, 0],
+#         color_errs,
+#         estimated_magnitude_errs.T,
+#     ),
+#     backend=backend,
+# )
+# sampler.run_mcmc(init_pos, 10000, progress=True)
