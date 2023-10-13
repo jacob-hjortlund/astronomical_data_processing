@@ -63,7 +63,7 @@ Fig. \ref{fig:random_bias} Shows four random bias files form the filtered files.
 
 
 \begin{figure}[ht!]
-\script{figures/random_bias_frames.py}
+%\script{figures/random_bias_frames.py}
     \begin{centering}
         \includegraphics[width=\linewidth]{figures/biases_all_hist.pdf}
         \caption{A histogram showing the data of all 40 bias files with an opacity of 1/40 for each point. The histogram shows the frequency of each adu value over all 40 bias files.}
@@ -125,7 +125,7 @@ Dark frames are long exposure measurements with a closed shutter to record the b
 \label{subsec:flats}
 Flat field frames are taken using an evenly illuminated surface and are used to calculate the relative pixel to pixel sensitivity of the CCD. After calibrating data with a master flat field the processed data will be flattened and have a uniform output. In our image calibration we are using both lampflats and skyflats to calibrate our scientific data. The skyflats are taken in 3 different filters; B, V, and R, while the lampflats are taken in the V and R filters. 
 %A common way of acquiring skyflats are by using the twilight sky as the evenly illuminated surface, this has the advantage of exactly representing the sky background including emission lines, and they have the disadvantage of only being available during twilight. Lamp flats are much more convenient in this regard as it just requires an evenly illuminated white background to observe. 
-When computing the standard deviation of the flatfield images we get []. Before creating our master flat fields we first calibrate both the skyflats and lampflats with our master dark, and bias frames. A master flat field is then created for every filter of both the lampflats, and the skyflats as seen in \ref{fig:master_skyflat} and \ref{fig:master_lampflat}. Since a change in illumination or exposure time would throw off the flux levels between flat field images we normalize the data to avoid this. [How did we do this? Did the flatfields have any vignetting?]
+When computing the standard deviation of the flatfield images we get []. Before creating our master flat fields we first calibrate both the skyflats and lampflats with our master dark, and bias frames. A master flat field is then created for every filter of both the lampflats, and the skyflats as seen in \ref{fig:master_skyflat} and \ref{fig:master_lampflat}. Since a change in illumination or exposure time would throw off the flux levels between flat field images we normalize the data to avoid this. 
 
 
 \begin{figure}[ht!]
